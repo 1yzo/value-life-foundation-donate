@@ -1,0 +1,29 @@
+.header {
+    padding: 0 12rem;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    /* background: #a4d5a2; */
+    background: #24b24b;
+    color: white;
+    height: 10vh;
+    min-height: 10vh;
+}
+
+.sections {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: end;
+}
+
+.link {
+    margin-left: 7.5rem;
+}
+
+.link--donate {
+    margin: 0;
+    margin-left: 7.2rem;
+    padding: 1rem;
+    border: 3px solid white;
+}
