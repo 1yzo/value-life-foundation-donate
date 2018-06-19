@@ -12,7 +12,9 @@
 
 .page__content {
     flex: 1;
-    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-top: 5rem;
     margin-right: 10rem;
     color: #3e434d;
