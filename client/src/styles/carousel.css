@@ -1,0 +1,9 @@
+.carousel-item {
+    opacity: 1;
+    transition: opacity 400ms ease-in-out;
+}
+
+.carousel-item--hidden {
+    opacity: 0;
+}
+
