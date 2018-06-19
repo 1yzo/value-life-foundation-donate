@@ -17,8 +17,8 @@ class ProgramsPage extends React.Component {
                     </p>
                 </div>
                 <div className="projects">
-                    <Carousel items={[
-                        <div className="page__content">
+                    <Carousel switchColor={'white'} items={[
+                        <div className="page__content page__content--left">
                             <h1 className="page__content__header">Current</h1>
                             <ul>
                                 <li>Libyan relief and humanitarian assistance (LR)</li>
@@ -26,7 +26,7 @@ class ProgramsPage extends React.Component {
                                 <li>Zakat and Qurban Management (ZQM)</li>
                             </ul>
                         </div>,
-                        <div className="page__content">
+                        <div className="page__content page__content--left">
                             <h1 className="page__content__header">Future</h1>
                             <ul>
                                 <li>Know Government Aid Programs (KGAP))</li>

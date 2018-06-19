@@ -1,9 +1,28 @@
+.carousel {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
 .carousel-item {
     opacity: 1;
     transition: opacity 400ms ease-in-out;
+    flex: 1;
 }
 
 .carousel-item--hidden {
     opacity: 0;
 }
 
+.carousel__switch {
+    display: flex;
+    font-size: larger;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+}
+
+.carousel__switch i {
+    font-size: 60px;
+}

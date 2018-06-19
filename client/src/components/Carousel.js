@@ -31,10 +31,17 @@ class Carousel extends React.Component {
     
     render() {
         return (
-            <div className={"carousel-item" + (this.state.shouldHide ? " carousel-item--hidden" : "")} 
-                onClick={this.handleClick} 
-            >
-                {this.props.items[this.state.index]}
+            <div className="carousel">
+                <div className={"carousel-item" + (this.state.shouldHide ? " carousel-item--hidden" : "")} 
+                    onClick={this.handleClick} 
+                >
+                    {this.props.items[this.state.index]}
+                </div>
+                <div className="carousel__switch" style={{ color: this.props.switchColor }}>
+                    <i className="material-icons">keyboard_arrow_left</i>
+                    {this.state.index + 1}
+                    <i className="material-icons">keyboard_arrow_right</i>
+                </div>
             </div>
         );
     }

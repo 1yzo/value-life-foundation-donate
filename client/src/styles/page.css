@@ -4,7 +4,6 @@
     border-bottom: 1vh solid #24b24b;
     position: relative;
     display: flex;
-    /* justify-content: end; */
 }
 
 .page--first {
@@ -12,6 +11,7 @@
 }
 
 .page__content {
+    flex: 1;
     width: 50rem;
     margin-top: 5rem;
     margin-right: 10rem;
@@ -32,8 +32,8 @@
 }
 
 .projects {
-    flex: 1;
     display: flex;
+    flex: 1;
     justify-content: center;
     background: #24b24b;
 }
