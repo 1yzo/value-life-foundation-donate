@@ -42,3 +42,11 @@
     transform: scale(2);
 }
 
+.switch__arrow {
+    transition: transform 150ms ease-in-out;
+    cursor: pointer;
+}
+
+.switch__arrow:hover {
+    transform: scale(1.2);
+}
