@@ -7,7 +7,7 @@
 
 .carousel-item {
     opacity: 1;
-    transition: opacity 400ms ease-in-out;
+    transition: opacity 300ms ease-in-out;
     flex: 1;
     justify-content: center;
     align-items: center;

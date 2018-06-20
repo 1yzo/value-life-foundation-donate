@@ -22,7 +22,7 @@ class Carousel extends React.Component {
 
     handleClick = (e) => {
         const direction = e.target.attributes.name.value;
-        setTimeout(this.changeItem.bind(null, direction), 500);
+        setTimeout(this.changeItem.bind(null, direction), 400);
         this.setState(() => ({ shouldHide: true }));
     };
 
