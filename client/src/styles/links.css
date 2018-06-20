@@ -1,0 +1,18 @@
+.links-holder {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+a {
+    margin-bottom: 35px;
+    margin-right: 50px;
+    text-decoration: none;
+    color: #3e434d;
+    transition: transform 150ms ease-in-out;
+    font-size: larger;
+}
+
+a:hover {
+    transform: scale(1.2);
+}

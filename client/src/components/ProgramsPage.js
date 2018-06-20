@@ -6,7 +6,7 @@ class ProgramsPage extends React.Component {
     render() {
         return (
             <div className="page">
-                <div className="page__content page__content--left">
+                <div className="page__content page__content--left page__content--centered">
                     <h1 className="page__content__header">Programs</h1>
                     <p>
                         In Value Life foundation two types of programs are structured and implemented: Human Relief Program 
