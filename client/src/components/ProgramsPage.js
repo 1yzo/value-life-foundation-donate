@@ -29,7 +29,7 @@ class ProgramsPage extends React.Component {
                         <div className="page__content page__content--left">
                             <h1 className="page__content__header">Future</h1>
                             <ul>
-                                <li>Know Government Aid Programs (KGAP))</li>
+                                <li>Know Government Aid Programs (KGAP)</li>
                                 <li>Help Africans (HA)</li>
                                 <li>Support Needy Students (SNS)</li>
                             </ul>
