@@ -1,18 +1,32 @@
 .page {
     margin: 0;
-    height: 89vh;
+    min-height: 99%;
     border-bottom: 1vh solid #24b24b;
-    display: flex;
+    display: block;
 }
 
 .page--first {
-    height: 79vh;
+    min-height: 79%;
+}
+
+@media (min-width: 745px) {
+    .page {
+        display: flex;
+    }
+
+    .page__content {
+        margin-top: 5rem;
+        margin-right: 10rem;
+    }
+
+    .page__content--left {
+        margin-left: 10rem;
+    }
 }
 
 .page__content {
     flex: 1;
-    margin-top: 5rem;
-    margin-right: 10rem;
+    padding: 2rem;
     color: #3e434d;
 }
 
@@ -23,7 +37,7 @@
 }
 
 .page__content--left {
-    margin-left: 12rem;
+  
 }
 
 .page__content__header {

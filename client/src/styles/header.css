@@ -39,3 +39,9 @@
     padding: 1rem;
     border: 3px solid white;
 }
+
+@media (max-width: 745px) {
+    .links-section {
+        display: none;
+    }
+}

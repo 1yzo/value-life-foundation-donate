@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/page.css';
 
-const AboutPage = () => (
+const WelcomePage = () => (
     <div className="page page--first">
         <div style={{ flex: 1 }}>
         </div>
@@ -17,4 +17,4 @@ const AboutPage = () => (
     </div>
 );
 
-export default AboutPage;
+export default WelcomePage;
