@@ -1,0 +1,36 @@
+.ScrollSections__links--active {
+    font-weight: bold;
+}
+
+.ScrollSections {
+
+}
+
+.ScrollSections__sections {
+
+}
+
+.ScrollSections__links {
+    display: flex;
+    position: fixed;
+    height: 3rem;
+    right: 0;
+    background-color: orange;
+    justify-content: space-around;
+}
+
+.Box {
+    height: 600px;
+}
+.Box--green {
+    background-color: springgreen;
+}
+
+.Box--blue {
+    background-color: steelblue;
+}
+
+.Box--red {
+    background-color: crimson;
+    height: 1200px;
+}
