@@ -1,0 +1,10 @@
+.HeaderLink {
+    margin-left: 7.5rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.HeaderLink--active {
+    font-weight: bold;
+}

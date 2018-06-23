@@ -9,8 +9,6 @@ html {
 body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1.6rem;
-    display: flex;
-    flex-direction: column;
 }
 
 #root {

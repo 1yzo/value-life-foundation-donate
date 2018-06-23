@@ -1,9 +1,10 @@
 import React from 'react';
+import { Element as ScrollableToDiv } from 'react-scroll';
 
 const DonatePage = () => (
-    <div>
+    <ScrollableToDiv name="/donate">
         Donate
-    </div>
+    </ScrollableToDiv>
 );
 
 export default DonatePage;
