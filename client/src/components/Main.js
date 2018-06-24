@@ -11,7 +11,7 @@ class Main extends React.Component {
         return (
             <div className="container">
                 <WelcomePage />
-                <ProgramsPage />
+                <ProgramsPage storeRef={this.props.storeRef}/>
                 <CurrentProjectsPage />
                 <LinksPage />
             </div>

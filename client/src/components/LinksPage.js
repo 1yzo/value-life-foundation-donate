@@ -4,7 +4,7 @@ import '../styles/links.css';
 import Scroll from 'react-scroll';
 
 const LinksPage = (props, ref) => (
-    <div className="page" >
+    <div className="page" id="temp">
         <div className="page__content page__content--left">
             <h1 className="page__content__header" onClick={() => {let scroll = Scroll.animateScroll; scroll.scrollTo(100)}}>  
                 Fighting poverty is targeted by VLF and

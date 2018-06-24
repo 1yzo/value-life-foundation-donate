@@ -3,9 +3,18 @@ import React from 'react';
 import Carousel from './Carousel';
 
 class ProgramsPage extends React.Component {    
+    constructor(props) {
+        super(props);
+        this.tempRef = React.createRef();
+    }
+
+    componentDidMount() {
+        this.props.storeRef(this.tempRef);
+    }
+    
     render() {
         return (
-            <div className="page">
+            <div className="page" ref={this.tempRef}>
                 <div className="page__content page__content--left page__content--centered">
                     <h1 className="page__content__header">Programs</h1>
                     <p>

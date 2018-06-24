@@ -5,18 +5,13 @@ import DonatePage from '../components/DonatePage';
 import Header from '../components/Header';
 
 class AppRouter extends React.Component {
-    constructor(props) {
-        super(props);
-        this.linksPageRef = React.createRef();
-    }
-    
     render() {
         return (
             <BrowserRouter>
                 <div style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-                    <Header />
+                    <Header tempRef={this.state.ref}/>
                     <Switch>
-                        <Route path="/" render={(props) => <Main />} exact={true} />
+                        <Route path="/" render={(props) => <Main storeRef={this.storeRef}/>} exact={true} />
                         <Route path="/donate" component={DonatePage} />
                     </Switch>
                 </div>

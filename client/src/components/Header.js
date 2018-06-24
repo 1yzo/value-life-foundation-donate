@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom';
 import '../styles/header.css';
 
 class Header extends React.Component {
-    handleLinksClick = () => {
-    }
-    
     render() {
         return (
             <div className="header">
                 <Link className="header-link" to="/">
                     <h1>VLF</h1>
+                    \
+                    
                 </Link>
                 <div className="links-section">
                     <h4 className="link">ABOUT US</h4>
