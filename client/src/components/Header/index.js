@@ -3,14 +3,21 @@
 import React from 'react'
 import { Route, Link, Switch } from 'react-router-dom'
 import ScrollToSection from './ScrollToSection'
+import { animateScroll } from 'react-scroll'
 
 import HeaderLink from './HeaderLink'
 
 import './index.css'
 
 class Header extends React.Component {
-    handleLinksClick = () => {
-
+    componentDidMount() {
+        const pathname = window.location.pathname;
+        if (pathname !== '/') {
+            setTimeout(() => {
+                console.log('pathname:', pathname);
+                animateScroll.scrollTo(pathname);
+            }, 5000);
+        }
     }
 
     render() {

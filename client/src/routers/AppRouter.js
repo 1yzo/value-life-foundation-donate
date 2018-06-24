@@ -12,7 +12,7 @@ class AppRouter extends React.Component {
     render() {
         return (
             <BrowserRouter>
-                <div style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden', paddingTop:'10vh' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden', marginTop:'10vh' }}>
                     <Header />
                     <Main />
                 </div>
