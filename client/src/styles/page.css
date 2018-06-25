@@ -2,7 +2,7 @@
     margin: 0;
     height: 99%;
     border-bottom: 7px solid #24b24b;
-    display: block;
+    min-height: 60rem;   
 }
 
 .page--first {

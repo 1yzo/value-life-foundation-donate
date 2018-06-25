@@ -1,9 +1,8 @@
 import React from 'react';
-import Header from './Header';
-
+import '../styles/page.css';
 
 const DonatePage = (props) => (
-    <div>
+    <div className="page">
         Donate
     </div>
 );

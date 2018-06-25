@@ -5,8 +5,7 @@
     margin: 0;
     background: #24b24b;
     color: white;
-    height: 10vh;
-    min-height: 10vh;
+    height: 7rem;
     position: fixed;
     width: 84%;
     /* width: 100% */
@@ -32,7 +31,7 @@
     color: white;
     text-decoration: none;
     display: flex;
-    height: 9.2vh;
+    height: 6.5rem;
     align-items: center;
     border-bottom: 5px solid transparent;
 
