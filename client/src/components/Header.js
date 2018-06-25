@@ -1,12 +1,19 @@
 import React from 'react';
-import { Link } from 'react-scroll';
+import { Link, animateScroll } from 'react-scroll';
 import '../styles/header.css';
 
 class Header extends React.Component {
+    scrollToTop = () => {
+        animateScroll.scrollToTop();
+    }
+
     render() {
         return <div className="header">
             <h1 className="header-link" onClick={this.scrollToTop}>VLF</h1>
             <div className="links-section">
+                <Link className="link" activeClass="link--active" to="about-us-page" spy smooth duration={500}>
+                    <h4>ABOUT US</h4>
+                </Link>
                 <Link className="link" activeClass="link--active" to="programs-page" spy smooth duration={500}>
                     <h4>PROGRAMS</h4>
                 </Link>

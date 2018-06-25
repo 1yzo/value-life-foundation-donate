@@ -9,18 +9,18 @@ import CurrentProjectsPage from './CurrentProjectsPage';
 import Header from './Header';
 import LinksPage from './LinksPage';
 import DonatePage from './DonatePage';
+import AboutUsPage from './AboutUsPage';
 
 class Main extends React.Component {
-    scrollToTop = () => {
-        animateScroll.scrollToTop();
-    }
-
     render() {
         return (
             <div>
-                <Header history={this.props.history} />
+                <Header />
                 <div className="container">
                     <WelcomePage />
+                    <Element name="about-us-page">
+                        <AboutUsPage />
+                    </Element>
                     <Element name="programs-page">
                         <ProgramsPage />
                     </Element>
