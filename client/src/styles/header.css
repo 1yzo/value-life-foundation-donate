@@ -32,6 +32,10 @@
     text-decoration: none;
 }
 
+.link--active {
+    color: #aef3aa;
+}
+
 .link h4 {
     margin: 0;
 }
