@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import '../styles/header.css';
 
@@ -12,7 +11,7 @@ class Header extends React.Component {
                     <h4>PROGRAMS</h4>
                 </Link>
                 <Link className="link" activeClass="link--active" to="current-projects-page" spy smooth duration={500}>
-                <h4>CURRENT PROJECTS</h4>
+                    <h4>CURRENT PROJECTS</h4>
                 </Link>
                 <Link className="link" activeClass="link--active" to="links-page" spy smooth duration={500}>
                     <h4>LINKS</h4>

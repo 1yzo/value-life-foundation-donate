@@ -27,13 +27,20 @@
 }
 
 .link {
-    margin-left: 7.5rem;
+    /* margin-left: 7.5rem; */
+    padding: 0 4.5rem;
     color: white;
     text-decoration: none;
+    display: flex;
+    height: 9.2vh;
+    align-items: center;
+    border-bottom: 5px solid transparent;
+
 }
 
 .link--active {
-    color: #aef3aa;
+    /* color: #aef3aa; */
+    border-bottom: 5px solid #aef3aa;
 }
 
 .link h4 {
