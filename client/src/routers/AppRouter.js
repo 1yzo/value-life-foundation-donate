@@ -9,9 +9,9 @@ class AppRouter extends React.Component {
         return (
             <BrowserRouter>
                 <div style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-                    <Header tempRef={this.state.ref}/>
+                    <Header />
                     <Switch>
-                        <Route path="/" render={(props) => <Main storeRef={this.storeRef}/>} exact={true} />
+                        <Route path="/" render={(props) => <Main />} exact={true} />
                         <Route path="/donate" component={DonatePage} />
                     </Switch>
                 </div>
