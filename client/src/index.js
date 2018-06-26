@@ -5,13 +5,13 @@ import registerServiceWorker from './registerServiceWorker';
 import 'normalize.css/normalize.css';
 import './styles/base.css';
 import configureStore from './store/configureStore';
-import AppRouter from './routers/AppRouter';
+import Main from './components/Main';
 
 const store = configureStore();
 
 const jsx = (
     <Provider  store={store}>
-        <AppRouter />
+        <Main />
     </Provider>
 );
 

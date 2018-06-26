@@ -1,9 +1,12 @@
 import React from 'react';
 import '../styles/page.css';
 import '../styles/donate.css';
+import '../styles/modal.css';
+import ReactModal from 'react-modal';
 
 class DonatePage extends React.Component {
     state = {
+        showModal: false,
         donationMethod: '' // Online, Mail, Wire Transfer, Phone
     };
 
@@ -12,6 +15,14 @@ class DonatePage extends React.Component {
             const donationMethod = e.target.attributes.name.value;
             this.setState(() => ({ donationMethod }));
         }
+    }
+
+    handleOpenModal = () => {
+        this.setState(() => ({ showModal: true }));
+    }
+
+    handleCloseModal = () => {
+        this.setState(() => ({ showModal: false}));
     }
     
     render() {
@@ -41,16 +52,25 @@ class DonatePage extends React.Component {
                             <i className="material-icons" name="mail">mail</i>
                             <label name="mail">Mail</label>
                         </a>
-                        <div className="icon-container" name="wireTransfer">
+                        <div className="icon-container" name="wireTransfer" onClick={this.handleOpenModal}>
                             <i className="material-icons">account_balance</i>
                             <label name="wireTransfer">Wire Transfer</label>
                         </div>
-                        <div className="icon-container" name="phone">
+                        <div className="icon-container" name="phone" onClick={this.handleOpenModal}>
                             <i className="material-icons" name="phone">phone</i>
                             <label name="phone">Call Us</label>
                         </div>
                     </form>
                 </div>
+                <ReactModal
+                    className="modal"
+                    isOpen={this.state.showModal}
+                    contentLabel="Modal"
+                    closeTimeoutMS={300}
+                >
+                    <p>Modal Test</p>
+                    <button onClick={this.handleCloseModal}>Close</button>
+                </ReactModal>
             </div>
         );
     }
