@@ -33,7 +33,7 @@
 }
 
 .page__content {
-    flex: 1;
+    /* flex: 1; */
     /* padding: 2rem; */
     color: #3e434d;
 }
@@ -46,18 +46,20 @@
 
 .page__content__header {
     line-height: 50px;
-    font-size: 4rem;
+    font-size: 4.5rem;
 }
 
 .page__content p {
-    line-height: 30px;
+    line-height: 35px;
+    font-size: 2rem;
 }
 
 .projects {
-    display: flex;
+    min-width: 30%;
     flex: 1;
+    display: flex;
     justify-content: center;
-    background: #24b24b;
+    background: #24b24bcc;
 }
 
 .projects h1 {
