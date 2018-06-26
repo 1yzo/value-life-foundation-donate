@@ -1,24 +1,29 @@
 .page {
     margin: 0;
     height: 99%;
-    /* border-bottom: 5px solid #83e29d; */
+    /* border-bottom: 5px solid #50c16f; */
     min-height: 60rem;   
 }
 
 .page--first {
     height: 79%;
+    border-bottom: 5px solid #50c16f;
 }
 
 @media (min-width: 745px) {
     .page {
         display: flex;
     }
-
     .page__content {
         padding: 0;
         padding-top: 5rem;
         padding-right: 12rem;
         padding-left: 12rem;
+    }
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-column-gap: 4rem;
     }
 }
 
@@ -47,7 +52,7 @@
     font-size: 4.5rem;
 }
 
-.page__content > p {
+p {
     line-height: 35px;
     font-size: 2rem;
 }
@@ -69,4 +74,8 @@
     color: white;
     margin-bottom: 30px;
     font-size: large;
+}
+
+.about {
+    /* Regular block display on mobile */
 }
