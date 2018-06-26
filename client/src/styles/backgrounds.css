@@ -1,0 +1,14 @@
+.welcome {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.397)), url(/images/alley.jpeg);
+    background-size: 100% 100%;
+}
+
+.programs {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2)), url(/images/hands.jpg);
+    background-size: 100% 100%;    
+}
+
+.links {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.397)), url(/images/woman-sitting.jpg);
+    background-size: 100% 100%;
+}
