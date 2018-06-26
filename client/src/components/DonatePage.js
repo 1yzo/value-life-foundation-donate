@@ -21,7 +21,7 @@ class DonatePage extends React.Component {
     }
 
     handleCloseModal = () => {
-        this.setState(() => ({ showModal: false}));
+        this.setState(() => ({ donationMethod: undefined, showModal: false}));
     }
     
     render() {
