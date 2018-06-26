@@ -15,10 +15,25 @@
 }
 
 .modal {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+    padding: 10rem;
     position: absolute;
-    width: 75%;
-    height: 75%;
-    background: #eee;
+    /* top: 10rem;
+    bottom: 10rem;
+    left: 10rem;
+    right: 10rem; */
+    width: 70%;
+    max-height: 50%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 7px rgba(78,76,80,.185);
+}
+
+@media (max-width: 745px) {
+    .modal {
+        padding: 3rem;
+        /* left: 3rem;
+        right: 3rem; */
+    }
 }

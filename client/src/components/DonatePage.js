@@ -1,8 +1,7 @@
 import React from 'react';
 import '../styles/page.css';
 import '../styles/donate.css';
-import '../styles/modal.css';
-import ReactModal from 'react-modal';
+import DonateModal from './DonateModal';
 
 class DonatePage extends React.Component {
     state = {
@@ -62,15 +61,7 @@ class DonatePage extends React.Component {
                         </div>
                     </form>
                 </div>
-                <ReactModal
-                    className="modal"
-                    isOpen={this.state.showModal}
-                    contentLabel="Modal"
-                    closeTimeoutMS={300}
-                >
-                    <p>Modal Test</p>
-                    <button onClick={this.handleCloseModal}>Close</button>
-                </ReactModal>
+                <DonateModal showModal={this.state.showModal} handleCloseModal={this.handleCloseModal} donationMethod={this.state.donationMethod}/>
             </div>
         );
     }
