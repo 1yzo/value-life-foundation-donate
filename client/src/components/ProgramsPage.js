@@ -6,7 +6,7 @@ class ProgramsPage extends React.Component {
     render() {
         return (
             <div className="page">
-                <div className="page__content page__content--left page__content--centered programs" style={{ color: 'white' }}>
+                <div className="page__content page__content--centered programs" style={{ color: 'white' }}>
                     <h1 className="page__content__header">Programs</h1>
                     <p>
                         In Value Life foundation two types of programs are structured and implemented: Human Relief Program 
@@ -18,7 +18,7 @@ class ProgramsPage extends React.Component {
                 </div>
                 <div className="projects">
                     <Carousel switchColor={'white'} items={[
-                        <div className="page__content page__content--left">
+                        <div className="page__content">
                             <h1 className="page__content__header">Current</h1>
                             <ul>
                                 <li>Libyan relief and humanitarian assistance (LR)</li>
@@ -26,7 +26,7 @@ class ProgramsPage extends React.Component {
                                 <li>Zakat and Qurban Management (ZQM)</li>
                             </ul>
                         </div>,
-                        <div className="page__content page__content--left">
+                        <div className="page__content">
                             <h1 className="page__content__header">Future</h1>
                             <ul>
                                 <li>Know Government Aid Programs (KGAP)</li>

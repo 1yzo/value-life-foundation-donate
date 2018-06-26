@@ -5,7 +5,7 @@ import '../styles/backgrounds.css';
 const WelcomePage = () => (
     <div className="page page--first welcome">
         <div style={{ flex: 1 }} />
-        <div className="page__content page__content--left" style={{ color: 'white', marginTop: '3rem' }}>
+        <div className="page__content" style={{ color: 'white', marginTop: '3rem' }}>
             <h1 className="page__content__header">Welcome to <br/>  Value Life Foundation</h1>
             <p> 
                 Value Life Foundation (VLF) is established in Claremont, California, USA in January 2002

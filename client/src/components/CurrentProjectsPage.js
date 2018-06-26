@@ -6,7 +6,7 @@ const CurrentProjectsPage = () => {
     return (
         <div className="page">
             <Carousel switchColor="#3e434d" items={[
-                <div className="page__content page__content--left">
+                <div className="page__content">
                     <h1 className="page__content__header">Libyan relief and humanitarian assistance</h1>
                     <p>
                         Since Feb 17th 2011, thousands of civilians have been targeted with heavy weaponry. 
@@ -17,14 +17,14 @@ const CurrentProjectsPage = () => {
                         are in cooperation to alleviate the suffering of the Libya people.
                     </p>
                 </div>,
-                <div className="page__content page__content--left">
+                <div className="page__content">
                     <h1 className="page__content__header">Needy Families</h1>
                     <p>
                         This project is structured to help qualified families in need.  To qualify for 
                         VLF help, feel free to contact us.
                     </p>
                 </div>,
-                <div className="page__content page__content--left">
+                <div className="page__content">
                     <h1 className="page__content__header">Orphan Support</h1>
                     <p>
                         In this project, donations are collected to support orphans that have no care taker
@@ -32,7 +32,7 @@ const CurrentProjectsPage = () => {
                         For more information on the OS, contact VLF.
                     </p>
                 </div>,
-                <div className="page__content page__content--left">
+                <div className="page__content">
                     <h1 className="page__content__header">Zakat and Qurban Management</h1>
                     <p>
                         This project takes care of collection and distributaries of Zakat (Alms) as well as the 
