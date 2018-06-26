@@ -8,8 +8,10 @@ class DonatePage extends React.Component {
     };
 
     handleChooseMethod = (e) => {
-        const donationMethod = e.target.attributes.name.value;
-        this.setState(() => ({ donationMethod }));
+        if (e.target.attributes.name) {
+            const donationMethod = e.target.attributes.name.value;
+            this.setState(() => ({ donationMethod }));
+        }
     }
     
     render() {
@@ -26,10 +28,22 @@ class DonatePage extends React.Component {
                 >
                     <h1 className="page__content__header">Donation Method</h1>
                     <form className="options-container" onClick={this.handleChooseMethod}>
-                        <i className="material-icons" name="online">payment</i>
-                        <i className="material-icons" name="mail">mail</i>
-                        <i className="material-icons" name="wireTransfer">account_balance</i>
-                        <i className="material-icons" name="phone">phone</i>
+                        <div className="icon-container" name="online">
+                            <img className="material-icons" name="online" src="/images/credit-card.png" />
+                            <label name="online">Pay Online</label>
+                        </div>
+                        <div className="icon-container" name="mail">
+                            <i className="material-icons" name="mail">mail</i>
+                            <label name="mail">Mail</label>
+                        </div>
+                        <div className="icon-container" name="wireTransfer">
+                            <i className="material-icons">account_balance</i>
+                            <label name="wireTransfer">Wire Transfer</label>
+                        </div>
+                        <div className="icon-container" name="phone">
+                            <i className="material-icons" name="phone">phone</i>
+                            <label name="phone">Call Us</label>
+                        </div>
                     </form>
                 </div>
             </div>
