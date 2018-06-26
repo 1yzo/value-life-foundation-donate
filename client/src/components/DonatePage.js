@@ -32,10 +32,15 @@ class DonatePage extends React.Component {
                             <img className="material-icons" name="online" src="/images/credit-card.png" />
                             <label name="online">Pay Online</label>
                         </div>
-                        <div className="icon-container" name="mail">
+                        <a
+                            className="icon-container" 
+                            name="mail" 
+                            href="http://www.valuelife.org/donatebymail.htm" 
+                            target="_blank" rel="noopener noreferrer"
+                        >
                             <i className="material-icons" name="mail">mail</i>
                             <label name="mail">Mail</label>
-                        </div>
+                        </a>
                         <div className="icon-container" name="wireTransfer">
                             <i className="material-icons">account_balance</i>
                             <label name="wireTransfer">Wire Transfer</label>

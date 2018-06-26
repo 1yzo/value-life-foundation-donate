@@ -9,7 +9,10 @@
     padding: 2rem;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 2px 7px rgba(17, 199, 47, 0.425);
+    /* box-shadow: 0 2px 7px rgba(17, 199, 47, 0.425); */
+    box-shadow: 0 2px 7px rgba(78,76,80,.185);
+    text-decoration: none;
+    color: #3e434d;
     cursor: pointer;
 }
 
