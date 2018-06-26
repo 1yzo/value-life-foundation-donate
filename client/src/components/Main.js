@@ -10,6 +10,7 @@ import Header from './Header';
 import LinksPage from './LinksPage';
 import DonatePage from './DonatePage';
 import AboutUsPage from './AboutUsPage';
+import QuickDonate from './QuickDonate';
 
 class Main extends React.Component {
     render() {

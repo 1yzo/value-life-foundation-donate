@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/page.css';
 
 const DonatePage = (props) => (
-    <div className="page">
+    <div className="page donate">
         Donate
     </div>
 );
