@@ -15,15 +15,9 @@
 }
 
 .modal {
-    /* display: flex;
-    flex-direction: column; */
     padding: 10rem;
     position: absolute;
-    /* top: 10rem;
-    bottom: 10rem;
-    left: 10rem;
-    right: 10rem; */
-    width: 70%;
+    max-width: 70%;
     max-height: 50%;
     background: white;
     border-radius: 10px;
@@ -33,7 +27,13 @@
 @media (max-width: 745px) {
     .modal {
         padding: 3rem;
-        /* left: 3rem;
-        right: 3rem; */
     }
+}
+
+.mini-container > p {
+    margin-bottom: 0rem;
+}
+
+.mini-container > a {
+    margin-left: 3rem;
 }

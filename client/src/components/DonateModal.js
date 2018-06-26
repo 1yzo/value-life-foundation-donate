@@ -17,8 +17,14 @@ class DonateModal extends React.Component {
                 >
                     {this.props.donationMethod === 'phone' && 
                         <div>
-                            <p>From USA, dial Toll Free     1-877-HELP-VLF</p>
-                            <p>From ELSEWHERE, dial         (+) 949-241-7659</p>
+                            <div className="mini-container">
+                                <p>From <strong>USA</strong> (Toll Free)</p>
+                                <a href="tel:18774357853">1-877-435-7853</a>
+                            </div>
+                            <div className="mini-container">
+                                <p>From <strong>ELSEWHERE</strong></p>
+                                <a href="tel:+9492417659">(+) 949-241-7659</a>
+                            </div>
                         </div>
                     }
                 </Modal>
