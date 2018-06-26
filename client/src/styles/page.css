@@ -7,7 +7,7 @@
 
 .page--first {
     height: 79%;
-    /* border-bottom: 5px solid #50c16f; */
+    border-bottom: 5px solid #50c16f;
 }
 
 @media (min-width: 745px) {

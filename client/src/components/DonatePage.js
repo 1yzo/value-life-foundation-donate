@@ -1,10 +1,14 @@
 import React from 'react';
 import '../styles/page.css';
 
-const DonatePage = (props) => (
-    <div className="page donate">
-        Donate
-    </div>
-);
+class DonatePage extends React.Component {
+    render() {
+        return (
+            <div className="page donate">
+                Donate
+            </div>
+        );
+    }
+}
 
 export default DonatePage;

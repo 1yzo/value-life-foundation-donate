@@ -1,0 +1,24 @@
+.quick-donate {
+    background: #50c16f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.quick-donate > form {
+    display: flex;
+    color: white;
+    margin-bottom: 0.67em;
+}
+
+.material-icons {
+    flex: 1;
+}
+
+.quick-donate > form > input {
+    border: none;
+    height: 3rem;
+    
+}
