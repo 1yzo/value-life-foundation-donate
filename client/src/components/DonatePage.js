@@ -52,7 +52,7 @@ class DonatePage extends React.Component {
                             <label name="mail">Mail</label>
                         </a>
                         <div className="icon-container" name="wireTransfer" onClick={this.handleOpenModal}>
-                            <i className="material-icons">account_balance</i>
+                            <i className="material-icons" name="wireTransfer">account_balance</i>
                             <label name="wireTransfer">Wire Transfer</label>
                         </div>
                         <div className="icon-container" name="phone" onClick={this.handleOpenModal}>

@@ -27,6 +27,24 @@ class DonateModal extends React.Component {
                             </div>
                         </div>
                     }
+
+                    {this.props.donationMethod === 'wireTransfer' &&
+                        <div>
+                            <div className="bank-container">
+                                <p className="bank-name">Bank of America</p>
+                                <p className="my-label">Branch</p>
+                                <p>La Verne</p>
+                                <p className="my-label">Address</p>
+                                <p>1399 Foothill blvd. La Verne, CA 91750</p>
+                                <p className="my-label">Phone</p>
+                                <a href="tel:9098652424">(909) 865-2424</a>
+                                <p><strong>Routing No</strong></p>
+                                <p className="my-labeldasd">122000661</p>
+                                <p><strong>Account No</strong></p>
+                                <p className="my-labeldsd">1127506203</p>
+                            </div>
+                        </div>
+                    }
                 </Modal>
         );
     }
