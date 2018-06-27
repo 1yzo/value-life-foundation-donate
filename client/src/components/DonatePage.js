@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/page.css';
 import '../styles/donate.css';
 import DonateModal from './DonateModal';
+import PaymentCheckout from './PaymentCheckout';
 
 class DonatePage extends React.Component {
     state = {
@@ -25,6 +26,9 @@ class DonatePage extends React.Component {
     }
     
     render() {
+        if (this.state.donationMethod === 'online') {
+            return <PaymentCheckout/>;
+        }
         return (
             <div className="page donate">
                 <div
