@@ -13,13 +13,13 @@ gateway.clientToken.generate({}, function (err, response) {
     var clientToken = response.clientToken
   });
 
-app.get("/client_token", function (req, res) {
+router.get("/client_token", function (req, res) {
     gateway.clientToken.generate({}, function (err, response) {
         res.send(response.clientToken);
     });
 });
 
-app.post("/checkout", function (req, res) {
+router.post("/checkout", function (req, res) {
     var nonceFromTheClient = req.body.payment_method_nonce;
     // Use payment nonce here
     gateway.transaction.sale({
