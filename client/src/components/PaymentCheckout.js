@@ -1,6 +1,5 @@
 import React from 'react';
-import { client } from 'braintree-web';
-import { hostedFields } from 'braintree-web';
+
 
 class PaymentCheckout extends React.Component {
     componentDidMount() {
@@ -9,7 +8,7 @@ class PaymentCheckout extends React.Component {
     
     render() {
         return (
-            <div className="page" id="dropin-container">
+            <div className="page">
                 Checkout
             </div>
         );
