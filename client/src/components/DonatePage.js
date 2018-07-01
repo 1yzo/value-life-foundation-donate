@@ -24,11 +24,8 @@ class DonatePage extends React.Component {
     handleCloseModal = () => {
         this.setState(() => ({ donationMethod: undefined, showModal: false}));
     }
-    
+
     render() {
-        if (this.state.donationMethod === 'online') {
-            return <PaymentCheckout/>;
-        }
         return (
             <div className="page donate">
                 <div
@@ -36,20 +33,22 @@ class DonatePage extends React.Component {
                     style={{
                         flex: 1,
                         display: 'flex',
-                        flexDirection: 'column', 
+                        flexDirection: 'column',
                         alignItems: 'center'
                     }}
                 >
                     <h1 className="page__content__header">Donation Method</h1>
                     <form className="options-container" onClick={this.handleChooseMethod}>
-                        <div className="icon-container" name="online">
-                            <img className="material-icons" name="online" src="/images/credit-card.png" />
-                            <label name="online">Pay Online</label>
-                        </div>
+                        <PaymentCheckout>
+                            <div className="icon-container" name="online">
+                                <img className="material-icons" name="online" src="/images/credit-card.png" />
+                                <label name="online">Pay Online</label>
+                            </div>
+                        </PaymentCheckout>
                         <a
-                            className="icon-container" 
-                            name="mail" 
-                            href="http://www.valuelife.org/donatebymail.htm" 
+                            className="icon-container"
+                            name="mail"
+                            href="http://www.valuelife.org/donatebymail.htm"
                             target="_blank" rel="noopener noreferrer"
                         >
                             <i className="material-icons" name="mail">mail</i>
