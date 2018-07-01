@@ -19,15 +19,14 @@ class PaymentCheckout extends React.Component {
     }
 
     render() {
-        const { children } = this.props;
         return (
-                <StripeCheckout
-                    token={this.onToken}
-                    stripeKey={secrets.clientKey}
-                    description="Testing"
-                >
-                    { children }
-                </StripeCheckout>
+            <StripeCheckout
+                token={this.onToken}
+                stripeKey={secrets.clientKey}
+                description="Testing"
+            >
+                { this.props.children }
+            </StripeCheckout>
         );
     }
 }
