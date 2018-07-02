@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import '../styles/modal.css';
 
@@ -10,6 +11,11 @@ class DonateModal extends React.Component {
     handleProgramOptionSelect = (e) => {
         const programOption = e.target.id;
         this.setState(() => ({ programOption }));
+    }
+
+    focusAmountInput = () => {
+        const ref = ReactDOM.findDOMNode(this.amountRef);
+        ref.focus();
     }
     
     render() {
@@ -51,7 +57,10 @@ class DonateModal extends React.Component {
                                         <label htmlFor="generalDonation">General Donation (Sadaqah)</label>
                                     </div>
                                 </form>
-                                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                <div
+                                    style={{ display: 'flex', flexDirection: 'column' }} 
+                                    onClick={this.focusAmountInput}
+                                >
                                     <div style={{ borderBottom: '2px solid #50c16f' }} />
                                     <form style={{ display: 'flex', margin: '3rem 0' }}>
                                         <div style={{ background: 'white', color: 'black', display: 'flex', alignItems: 'center' }}>
@@ -59,7 +68,8 @@ class DonateModal extends React.Component {
                                                 attach_money
                                             </i>
                                         </div>
-                                        <input 
+                                        <input
+                                            ref={el => {this.amountRef = el}}
                                             style={{ border: 'none' }}
                                             type="text"
                                         />
