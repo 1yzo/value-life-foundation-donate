@@ -25,7 +25,9 @@ class DonateModal extends React.Component {
         const amount = e.target.value;
         if ((amount * 100) < 50) {
             this.setState(() => ({ error: 'amount less than 50₵ not allowed'}));
-        } 
+        } else {
+            this.setState(() => ({ error: '' }));
+        }
         if (!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)) {
             this.setState(() => ({ amount }));
         }
