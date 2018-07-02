@@ -5,12 +5,11 @@ import secrets from  '../secrets';
 
 class PaymentCheckout extends React.Component {
     onToken = (token) => {
-        console.log(token);
         fetch('/api/charge', {
             method: 'POST',
             body: JSON.stringify({
                 token: 'tok_visa',
-                amount: 2000
+                amount: this.props.amount
             }),
             headers: {
                 'content-type': 'application/json'
@@ -24,6 +23,7 @@ class PaymentCheckout extends React.Component {
                 token={this.onToken}
                 stripeKey={secrets.clientKey}
                 description="Testing"
+                amount={this.props.amount}
             >
                 { this.props.children }
             </StripeCheckout>

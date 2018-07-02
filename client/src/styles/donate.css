@@ -119,5 +119,10 @@
 }
 
 .checkout-button:hover {
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
+}
+
+.error-info {
+    color: red;
+    font-size: 1.5rem;
 }

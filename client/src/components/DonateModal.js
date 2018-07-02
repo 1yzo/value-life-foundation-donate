@@ -6,7 +6,9 @@ import PaymentCheckout from './PaymentCheckout';
 
 class DonateModal extends React.Component {
     state = {
-        programOption: ''
+        programOption: '',
+        amount: '',
+        error: ''
     };
 
     handleProgramOptionSelect = (e) => {
@@ -17,6 +19,16 @@ class DonateModal extends React.Component {
     focusAmountInput = () => {
         const ref = ReactDOM.findDOMNode(this.amountRef);
         ref.focus();
+    }
+
+    handleAmountChange = (e) => {
+        const amount = e.target.value;
+        if ((amount * 100) < 50) {
+            this.setState(() => ({ error: 'amount less than 50₵ not allowed'}));
+        } 
+        if (!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)) {
+            this.setState(() => ({ amount }));
+        }
     }
     
     render() {
@@ -73,11 +85,18 @@ class DonateModal extends React.Component {
                                             ref={el => {this.amountRef = el}}
                                             style={{ border: 'none', fontSize: '2rem' }}
                                             type="text"
+                                            onChange={this.handleAmountChange}
+                                            value={this.state.amount}
                                         />
                                     </form>
                                     <div style={{ borderBottom: '2px solid #50c16f' }} />
-                                    <PaymentCheckout>
-                                        <button onClick={() => this.props.handleCloseModal()}className="checkout-button">Continue To Checkout</button>
+                                    {this.state.error && <div className="error-info">{this.state.error}</div>}
+                                    <PaymentCheckout amount={this.state.amount * 100}>
+                                        <button 
+                                            disabled={!this.state.amount || (this.state.amount * 100) < 50} 
+                                            onClick={() => this.props.handleCloseModal()}
+                                            className="checkout-button">Continue To Checkout
+                                        </button>
                                     </PaymentCheckout>
                                 </div>
                             </div>
