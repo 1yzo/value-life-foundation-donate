@@ -39,12 +39,10 @@ class DonatePage extends React.Component {
                 >
                     <h1 className="page__content__header">Donation Method</h1>
                     <form className="options-container" onClick={this.handleChooseMethod}>
-                        <PaymentCheckout>
-                            <div className="icon-container" name="online">
-                                <img className="material-icons" name="online" src="/images/credit-card.png" />
-                                <label name="online">Pay Online</label>
-                            </div>
-                        </PaymentCheckout>
+                        <div className="icon-container" name="online" onClick={this.handleOpenModal}>
+                            <img className="material-icons" name="online" src="/images/credit-card.png" />
+                            <label name="online">Pay Online</label>
+                        </div>
                         <a
                             className="icon-container"
                             name="mail"

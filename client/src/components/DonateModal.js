@@ -15,6 +15,46 @@ class DonateModal extends React.Component {
                     shouldCloseOnEsc={true}
                     ariaHideApp={false}
                 >
+                    {this.props.donationMethod === 'online' &&
+                        <div>
+                            <div className="donate-options-container">
+                                <form className="options">
+                                    <div>
+                                        <input type="radio" name="option" id="libyanCrisis"/>
+                                        <label for="libyanCrisis">Libyan Crisis</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="option" id="needyFamilies"/>
+                                        <label for="needyFamilies">Needy Families</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="option" id="charity"/>
+                                        <label for="charity">Charity (Zakat Al Mal)</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="option" id="sponsorOrphan"/>
+                                        <label for="sponsorOrphan">Sponsor an Orphan</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="option" id="generalDonation"/>
+                                        <label for="generalDonation">General Donation (Sadaqah)</label>
+                                    </div>
+                                </form>
+                                <form style={{ display: 'flex' }}>
+                                    <div style={{ background: 'white', color: 'black', display: 'flex', alignItems: 'center' }}>
+                                        <i className="material-icons" style={{ color: '#50c16f' }}>
+                                            attach_money
+                                        </i>
+                                    </div>
+                                    <input 
+                                        style={{ border: 'none' }}
+                                        type="text"
+                                    />
+                                </form>
+                            </div>
+                        </div>
+                    }
+
                     {this.props.donationMethod === 'phone' && 
                         <div>
                             <div className="mini-container">

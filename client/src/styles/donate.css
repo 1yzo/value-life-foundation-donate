@@ -47,3 +47,28 @@
         margin: 2rem;
     }
 }
+
+.donate-options-container {
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.donate-options-container > select {
+    margin-bottom: 3rem;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem;
+}
+
+.options > div > input {
+    margin-right: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.options > div > label {
+    color: #3e434d;
+    font-size: 2rem;
+}
