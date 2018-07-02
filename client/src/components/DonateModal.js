@@ -102,7 +102,13 @@ class DonateModal extends React.Component {
                                     <button 
                                         className="checkout-button"
                                         disabled={!this.state.amount || !!this.state.error || !this.state.programOption} 
-                                        onClick={() => this.props.handleCloseModal()}
+                                        onClick={() => {
+                                            this.props.handleCloseModal();
+                                            this.setState(() => ({ 
+                                                programOption: '',
+                                                amount: ''
+                                            }));
+                                        }}
                                     >
                                         Continue To Checkout
                                     </button>
