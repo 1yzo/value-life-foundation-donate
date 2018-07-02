@@ -100,7 +100,7 @@
     color: white;
 } */
 
-.donate-options-container > div > button {
+.checkout-button {
     color: white;
     background: #50c16f;
     border: none;
@@ -110,13 +110,14 @@
     border-bottom: 4px solid #48ac62; 
     outline: none;
     transition: transform 200ms ease-out;
+    width: 100%;
 }
 
-.donate-options-container > div > button:active {
+.checkout-button:active {
     border-bottom: none;
     border-top: 4px solid #48ac62;
 }
 
-.donate-options-container > div > button:hover {
+.checkout-button:hover {
     transform: scale(1.05);
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import '../styles/modal.css';
+import PaymentCheckout from './PaymentCheckout';
 
 class DonateModal extends React.Component {
     state = {
@@ -58,7 +59,7 @@ class DonateModal extends React.Component {
                                     </div>
                                 </form>
                                 <div
-                                    style={{ display: 'flex', flexDirection: 'column' }} 
+                                    style={{ display: 'flex', flexDirection: 'column', cursor: 'text' }} 
                                     onClick={this.focusAmountInput}
                                 >
                                     <div style={{ borderBottom: '2px solid #50c16f' }} />
@@ -70,12 +71,14 @@ class DonateModal extends React.Component {
                                         </div>
                                         <input
                                             ref={el => {this.amountRef = el}}
-                                            style={{ border: 'none' }}
+                                            style={{ border: 'none', fontSize: '2rem' }}
                                             type="text"
                                         />
                                     </form>
                                     <div style={{ borderBottom: '2px solid #50c16f' }} />
-                                    <button>Continue To Checkout</button>
+                                    <PaymentCheckout>
+                                        <button onClick={() => this.props.handleCloseModal()}className="checkout-button">Continue To Checkout</button>
+                                    </PaymentCheckout>
                                 </div>
                             </div>
                         </div>
