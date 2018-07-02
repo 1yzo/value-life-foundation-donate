@@ -3,6 +3,15 @@ import Modal from 'react-modal';
 import '../styles/modal.css';
 
 class DonateModal extends React.Component {
+    state = {
+        programOption: ''
+    };
+
+    handleProgramOptionSelect = (e) => {
+        const programOption = e.target.id;
+        this.setState(() => ({ programOption }));
+    }
+    
     render() {
         return (
             <Modal
@@ -18,39 +27,46 @@ class DonateModal extends React.Component {
                     {this.props.donationMethod === 'online' &&
                         <div>
                             <div className="donate-options-container">
-                                <form className="options">
+                                <form className="options" onChange={this.handleProgramOptionSelect}>
                                     <div>
                                         <input type="radio" name="option" id="libyanCrisis"/>
-                                        <label for="libyanCrisis">Libyan Crisis</label>
+                                        <label htmlFor="libyanCrisis">Libyan Crisis</label>
                                     </div>
                                     <div>
                                         <input type="radio" name="option" id="needyFamilies"/>
-                                        <label for="needyFamilies">Needy Families</label>
+                                        <label htmlFor="needyFamilies">Needy Families</label>
+                                        {this.state.programOption === 'needyFamilies' && <div className="info">$100 supports 1 family</div>}
                                     </div>
                                     <div>
                                         <input type="radio" name="option" id="charity"/>
-                                        <label for="charity">Charity (Zakat Al Mal)</label>
+                                        <label htmlFor="charity">Charity (Zakat Al Mal)</label>
                                     </div>
                                     <div>
                                         <input type="radio" name="option" id="sponsorOrphan"/>
-                                        <label for="sponsorOrphan">Sponsor an Orphan</label>
+                                        <label htmlFor="sponsorOrphan">Sponsor an Orphan</label>
+                                        {this.state.programOption === 'sponsorOrphan' && <div className="info">$35 supports 1 orphan</div>}
                                     </div>
                                     <div>
                                         <input type="radio" name="option" id="generalDonation"/>
-                                        <label for="generalDonation">General Donation (Sadaqah)</label>
+                                        <label htmlFor="generalDonation">General Donation (Sadaqah)</label>
                                     </div>
                                 </form>
-                                <form style={{ display: 'flex' }}>
-                                    <div style={{ background: 'white', color: 'black', display: 'flex', alignItems: 'center' }}>
-                                        <i className="material-icons" style={{ color: '#50c16f' }}>
-                                            attach_money
-                                        </i>
-                                    </div>
-                                    <input 
-                                        style={{ border: 'none' }}
-                                        type="text"
-                                    />
-                                </form>
+                                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                    <div style={{ borderBottom: '2px solid #50c16f' }} />
+                                    <form style={{ display: 'flex', margin: '3rem 0' }}>
+                                        <div style={{ background: 'white', color: 'black', display: 'flex', alignItems: 'center' }}>
+                                            <i className="material-icons" style={{ color: '#50c16f' }}>
+                                                attach_money
+                                            </i>
+                                        </div>
+                                        <input 
+                                            style={{ border: 'none' }}
+                                            type="text"
+                                        />
+                                    </form>
+                                    <div style={{ borderBottom: '2px solid #50c16f' }} />
+                                    <button>Continue To Checkout</button>
+                                </div>
                             </div>
                         </div>
                     }
@@ -79,9 +95,9 @@ class DonateModal extends React.Component {
                                 <p className="my-label">Phone</p>
                                 <a href="tel:9098652424">(909) 865-2424</a>
                                 <p><strong>Routing No</strong></p>
-                                <p className="my-labeldasd">122000661</p>
+                                <p className="my-label">122000661</p>
                                 <p><strong>Account No</strong></p>
-                                <p className="my-labeldsd">1127506203</p>
+                                <p className="my-label">1127506203</p>
                             </div>
                         </div>
                     }

@@ -56,6 +56,13 @@
     margin-left: 7.2rem;
     padding: 1rem;
     border: 3px solid #24b24b;
+    transition: background 200ms ease-in-out;
+    transition: color 300ms ease-in-out;
+}
+
+.link--donate:hover {
+    background: #24b24b;
+    color: white;
 }
 
 @media (max-width: 745px) {
