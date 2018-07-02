@@ -23,8 +23,8 @@ class DonateModal extends React.Component {
 
     handleAmountChange = (e) => {
         const amount = e.target.value;
-        if ((amount * 100) < 50) {
-            this.setState(() => ({ error: 'amount less than 50₵ not allowed'}));
+        if ((amount * 100) < 50 || (amount * 100) >= 100000000) {
+            this.setState(() => ({ error: 'Amount must be in range $0.50 - $999,999'}));
         } else {
             this.setState(() => ({ error: '' }));
         }
@@ -56,7 +56,10 @@ class DonateModal extends React.Component {
                                     <div>
                                         <input type="radio" name="option" id="needyFamilies"/>
                                         <label htmlFor="needyFamilies">Needy Families</label>
-                                        {this.state.programOption === 'needyFamilies' && <div className="info">$100 supports 1 family</div>}
+                                        {   
+                                            this.state.programOption === 'needyFamilies' &&
+                                            <div className="info">$100 supports 1 family</div>
+                                        }
                                     </div>
                                     <div>
                                         <input type="radio" name="option" id="charity"/>
@@ -65,19 +68,21 @@ class DonateModal extends React.Component {
                                     <div>
                                         <input type="radio" name="option" id="sponsorOrphan"/>
                                         <label htmlFor="sponsorOrphan">Sponsor an Orphan</label>
-                                        {this.state.programOption === 'sponsorOrphan' && <div className="info">$35 supports 1 orphan</div>}
+                                        {
+                                            this.state.programOption === 'sponsorOrphan' &&
+                                            <div className="info">$35 supports 1 orphan</div>
+                                        }
                                     </div>
                                     <div>
                                         <input type="radio" name="option" id="generalDonation"/>
                                         <label htmlFor="generalDonation">General Donation (Sadaqah)</label>
                                     </div>
                                 </form>
-                                <div
-                                    style={{ display: 'flex', flexDirection: 'column', cursor: 'text' }} 
+                                <div 
                                     onClick={this.focusAmountInput}
+                                    style={{ borderBottom: '2px solid #50c16f', borderTop: '2px solid #50c16f', cursor: 'text', marginBottom: '3rem' }}
                                 >
-                                    <div style={{ borderBottom: '2px solid #50c16f' }} />
-                                    <form style={{ display: 'flex', margin: '3rem 0' }}>
+                                    <form className="amount-form" onSubmit={(e) => e.preventDefault()}>
                                         <div style={{ background: 'white', color: 'black', display: 'flex', alignItems: 'center' }}>
                                             <i className="material-icons" style={{ color: '#50c16f' }}>
                                                 attach_money
@@ -91,16 +96,17 @@ class DonateModal extends React.Component {
                                             value={this.state.amount}
                                         />
                                     </form>
-                                    <div style={{ borderBottom: '2px solid #50c16f' }} />
-                                    {this.state.error && <div className="error-info">{this.state.error}</div>}
-                                    <PaymentCheckout amount={this.state.amount * 100}>
-                                        <button 
-                                            disabled={!this.state.amount || (this.state.amount * 100) < 50} 
-                                            onClick={() => this.props.handleCloseModal()}
-                                            className="checkout-button">Continue To Checkout
-                                        </button>
-                                    </PaymentCheckout>
                                 </div>
+                                {this.state.error && <div className="error-info">{this.state.error}</div>}
+                                <PaymentCheckout amount={this.state.amount * 100} programOption={this.state.programOption}>
+                                    <button 
+                                        className="checkout-button"
+                                        disabled={!this.state.amount || !!this.state.error || !this.state.programOption} 
+                                        onClick={() => this.props.handleCloseModal()}
+                                    >
+                                        Continue To Checkout
+                                    </button>
+                                </PaymentCheckout>
                             </div>
                         </div>
                     }

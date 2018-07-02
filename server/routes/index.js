@@ -1,7 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const secrets = require('../../secrets');
-const stripe = require('stripe')(secrets.serverKey);
+let secrets = '';
+
+if (process.env.NODE_ENV !== 'production') {
+    secrets = require('../../secrets');
+}
+
+const stripe = require('stripe')(secrets.serverKey || process.env.STRIPE_TEST_KEY);
 
 router.post('/charge', (req, res, next) => {
     const { amount, token } = req.body;

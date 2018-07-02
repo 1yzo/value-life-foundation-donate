@@ -1,7 +1,6 @@
 import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import '../styles/donate.css';
-import secrets from  '../secrets';
 
 class PaymentCheckout extends React.Component {
     onToken = (token) => {
@@ -20,9 +19,9 @@ class PaymentCheckout extends React.Component {
     render() {
         return (
             <StripeCheckout
+                name="Value Life Foundation"
                 token={this.onToken}
-                stripeKey={secrets.clientKey}
-                description="Testing"
+                stripeKey="pk_test_DPKp8WsiKFfpeqjVoxldGJrF"
                 amount={this.props.amount}
             >
                 { this.props.children }

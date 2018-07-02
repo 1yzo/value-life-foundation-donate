@@ -39,22 +39,9 @@
     transform: translateY(-15px);
 }
 
-@media (max-width: 745px) {
-    .options-container {
-        flex-direction: column;
-    }
-    .donate .material-icons {
-        margin: 2rem;
-    }
-}
-
 .donate-options-container {
     display: flex;
     flex-direction: column;
-}
-
-.donate-options-container > select {
-    margin-bottom: 3rem;
 }
 
 .options {
@@ -83,29 +70,11 @@
     color: #50c16f;
 }
 
-/* Color Inverse On Hover */
-/* .donate-options-container > button {
-    background: white;
-    color: #50c16f;
-    border: none;
-    padding: 1rem;
-    margin-top: 3rem;
-    font-size: 2rem;
-    transition: all 200ms ease-in-out;
-    border: 2px solid #50c16f; 
-}
-
-.donate-options-container > button:hover {
-    background: #50c16f;
-    color: white;
-} */
-
 .checkout-button {
     color: white;
     background: #50c16f;
     border: none;
     padding: 1rem;
-    margin-top: 3rem;
     font-size: 2rem;
     border-bottom: 4px solid #48ac62; 
     outline: none;
@@ -118,11 +87,31 @@
     border-top: 4px solid #48ac62;
 }
 
-.checkout-button:hover {
-    /* transform: scale(1.05); */
-}
-
 .error-info {
     color: red;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.amount-form {
+    display: flex;
+    margin: 3rem 0;
+}
+
+@media (max-width: 745px) {
+    .options-container {
+        flex-direction: column;
+    }
+    .donate .material-icons {
+        margin: 2rem;
+    }
+    .options > div {
+        margin-bottom: 1rem;
+    }
+    .options > div > label {
+        font-size: 1.5rem;
+    }
+    .amount-form {
+        margin: 2rem 0;
+    }
 }
