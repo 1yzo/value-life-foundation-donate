@@ -96,5 +96,6 @@ p {
     .too-long {
         overflow: auto;
         height: 200px;
+        -webkit-overflow-scrolling: touch;
     }
 }
