@@ -4,7 +4,7 @@ import Carousel from './Carousel';
 
 const CurrentProjectsPage = () => {
     return (
-        <div className="page">
+        <div className="page page--fixed">
             <Carousel switchColor="#3e434d" items={[
                 <div className="page__content">
                     <h1 className="page__content__header">Libyan relief and humanitarian assistance</h1>
