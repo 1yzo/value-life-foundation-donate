@@ -1,0 +1,29 @@
+.floating-menu {
+    border-radius: 50px;
+    background: white;
+    box-shadow: 0 1px 10px rgba(78,76,80,.185);    
+    position: fixed;
+    top: 88%;
+    right: 2rem;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    z-index: 1;
+    transition: all 300ms ease-in-out;
+}
+
+.floating-menu--expanded {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    top: 70px;
+    right: 0;
+    border-radius: 0;
+}
+
+.drawer {
+    color: #24b24bcc;
+    font-size: 3.5rem;
+}
