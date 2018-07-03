@@ -5,6 +5,7 @@
     opacity: 0;
     transition: opacity 200ms ease-in-out;
     position: relative;
+    z-index: 2;
 }
 
 .ReactModalPortal .ReactModal__Overlay--after-open {
