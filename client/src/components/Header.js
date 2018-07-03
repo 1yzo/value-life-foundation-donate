@@ -28,8 +28,8 @@ class Header extends React.Component {
                     <Link className="link"  style={{ paddingRight: 0} } to="donate-page" spy smooth duration={500} offset={-70}>
                         <h4 className="link--donate">DONATE</h4>
                     </Link>
-                    <div className="placeholder"/>
                 </div>
+                <div className="placeholder"/>
             </div>
         );
     }

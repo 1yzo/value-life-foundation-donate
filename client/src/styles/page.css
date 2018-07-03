@@ -90,7 +90,11 @@ p {
         display: flex;
         justify-content: space-between;
         min-height: 472px;
-        max-height: 472px;
+        height: 472px;
+        overflow: hidden;
+    }
+    .too-long {
         overflow: auto;
+        height: 200px;
     }
 }
