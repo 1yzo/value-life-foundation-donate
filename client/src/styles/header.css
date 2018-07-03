@@ -31,7 +31,6 @@
 }
 
 .link {
-    /* margin-left: 7.5rem; */
     padding: 0 4.5rem;
     color: #24b24b;
     text-decoration: none;
@@ -67,7 +66,17 @@
 }
 
 @media (max-width: 745px) {
-    .links-section {
+    .header-link {
+        font-size: 4rem;
+    }
+    .desktop-only {
         display: none;
+    }
+    .placeholder {
+        flex-basis: 2rem;
+    }
+    .link--donate {
+        width: 15rem;
+        text-align: center
     }
 }

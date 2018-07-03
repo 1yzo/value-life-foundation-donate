@@ -16,3 +16,9 @@
 .donate {
     border-bottom: 5px solid #50c16f;
 }
+
+@media (max-width: 745px) {
+    .links {
+        background: #50c16f;
+    }
+}
