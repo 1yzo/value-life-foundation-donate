@@ -1,9 +1,10 @@
 .ReactModalPortal .ReactModal__Overlay {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     opacity: 0;
     transition: opacity 200ms ease-in-out;
+    position: relative;
 }
 
 .ReactModalPortal .ReactModal__Overlay--after-open {
@@ -15,10 +16,14 @@
 }
 
 .modal {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* old */
     padding: 10rem;
     position: absolute;
     max-width: 70%;
-    /* max-height: 50%; */
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 7px rgba(78,76,80,.185);
@@ -28,7 +33,8 @@
 @media (max-width: 745px) {
     .modal {
         padding: 3rem;
-        top: 90px;
+        min-width: 70%;
+
     }
     .bank-container p {
         font-size: 1.3rem;
