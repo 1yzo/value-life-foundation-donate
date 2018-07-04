@@ -8,14 +8,15 @@ class PaymentCheckout extends React.Component {
             method: 'POST',
             body: JSON.stringify({
                 token: 'tok_visa',
-                amount: this.props.amount
+                amount: this.props.amount,
+                description: this.props.programOption
             }),
             headers: {
                 'content-type': 'application/json'
             }
         })
     }
-
+    
     render() {
         return (
             <StripeCheckout
@@ -23,6 +24,7 @@ class PaymentCheckout extends React.Component {
                 token={this.onToken}
                 stripeKey="pk_test_DPKp8WsiKFfpeqjVoxldGJrF"
                 amount={this.props.amount}
+                description={this.props.programOption}
             >
                 { this.props.children }
             </StripeCheckout>

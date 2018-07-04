@@ -9,11 +9,12 @@ if (process.env.NODE_ENV !== 'production') {
 const stripe = require('stripe')(secrets.serverKey || process.env.STRIPE_TEST_KEY);
 
 router.post('/charge', (req, res, next) => {
-    const { amount, token } = req.body;
+    const { amount, token, description } = req.body;
     const charge = stripe.charges.create({
         amount,
         currency: 'usd',
         source: token,
+        description
     }, (err, charge) => console.log(err));
     res.json(charge);
 });

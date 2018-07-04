@@ -50,32 +50,32 @@ class DonateModal extends React.Component {
                             <div className="donate-options-container">
                                 <form className="options" onChange={this.handleProgramOptionSelect}>
                                     <div>
-                                        <input type="radio" name="option" id="libyanCrisis"/>
-                                        <label htmlFor="libyanCrisis">Libyan Crisis</label>
+                                        <input type="radio" name="option" id="Libyan Crisis"/>
+                                        <label htmlFor="Libyan Crisis">Libyan Crisis</label>
                                     </div>
                                     <div>
-                                        <input type="radio" name="option" id="needyFamilies"/>
-                                        <label htmlFor="needyFamilies">Needy Families</label>
+                                        <input type="radio" name="option" id="Needy Families"/>
+                                        <label htmlFor="Needy Families">Needy Families</label>
                                         {   
-                                            this.state.programOption === 'needyFamilies' &&
+                                            this.state.programOption === 'Needy Families' &&
                                             <div className="info">$100 supports 1 family</div>
                                         }
                                     </div>
                                     <div>
-                                        <input type="radio" name="option" id="charity"/>
-                                        <label htmlFor="charity">Charity (Zakat Al Mal)</label>
+                                        <input type="radio" name="option" id="Charity"/>
+                                        <label htmlFor="Charity">Charity (Zakat Al Mal)</label>
                                     </div>
                                     <div>
-                                        <input type="radio" name="option" id="sponsorOrphan"/>
-                                        <label htmlFor="sponsorOrphan">Sponsor an Orphan</label>
+                                        <input type="radio" name="option" id="Sponsor an Orphan"/>
+                                        <label htmlFor="Sponsor an Orphan">Sponsor an Orphan</label>
                                         {
-                                            this.state.programOption === 'sponsorOrphan' &&
+                                            this.state.programOption === 'Sponsor an Orphan' &&
                                             <div className="info">$35 supports 1 orphan</div>
                                         }
                                     </div>
                                     <div>
-                                        <input type="radio" name="option" id="generalDonation"/>
-                                        <label htmlFor="generalDonation">General Donation (Sadaqah)</label>
+                                        <input type="radio" name="option" id="General Donation"/>
+                                        <label htmlFor="General Donation">General Donation (Sadaqah)</label>
                                     </div>
                                 </form>
                                 <div 

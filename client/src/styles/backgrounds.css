@@ -5,12 +5,12 @@
 
 .programs {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2)), url(/images/hands.jpg);
-    background-size: 100% 100%;    
+    background-size: cover;
 }
 
 .links {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.397)), url(/images/woman-sitting.jpg);
-    background-size: 100% 100%;
+    background-size: cover;
 }
 
 .donate {
