@@ -4,8 +4,20 @@ import '../styles/header.css';
 import FloatingMenu from './FloatingMenu';
 
 class Header extends React.Component {
+    state = {
+        donateClicked: false
+    }
+    
     scrollToTop = () => {
         animateScroll.scrollToTop();
+    }
+
+    handleDonateClick = (x) => {
+        this.setState(() => ({ donateClicked : true }));
+    }
+
+    resetDonateClicked = () => {
+        this.setState(() => ({ donateClicked: false }));
     }
 
     render() {
@@ -27,13 +39,13 @@ class Header extends React.Component {
                         <Link className="link desktop-only" activeClass="link--active" to="links-page" spy smooth duration={500} offset={-70}>
                             <h4>LINKS</h4>
                         </Link>
-                        <Link className="link"  style={{ paddingRight: 0} } to="donate-page" spy smooth duration={500} offset={-70}>
+                        <Link onClick={this.handleDonateClick} className="link"  style={{ paddingRight: 0} } to="donate-page" spy smooth duration={500} offset={-70}>
                             <h4 className="link--donate">DONATE</h4>
                         </Link>
                     </div>
                     <div className="placeholder"/>
                 </div>
-                <FloatingMenu />
+                <FloatingMenu resetDonateClicked={this.resetDonateClicked} donateClicked={this.state.donateClicked}/>
             </div>
         );
     }

@@ -10,6 +10,14 @@ class FloatingMenu extends React.Component {
     handleExpand = () => {
         this.setState((prevState) => ({ shouldExpand: !prevState.shouldExpand }));
     }
+
+    componentDidUpdate() {
+        console.log('willUpdate')
+        if (this.props.donateClicked && this.state.shouldExpand) {
+            this.setState(() => ({ shouldExpand: false }));
+            this.props.resetDonateClicked()
+        }
+    }
     
     render() {
         return (
