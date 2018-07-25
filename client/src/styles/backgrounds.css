@@ -22,4 +22,7 @@
     .links {
         background: #50c16f;
     }
+    .programs {
+        background-attachment: unset;
+    }
 }
