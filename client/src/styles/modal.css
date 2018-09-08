@@ -67,11 +67,6 @@
     grid-gap: 0.1rem;
 }
 
-.bank-name {
-    grid-column: 1/3;
-    font-weight: bold;
-}
-
 .bank-container > p {
     margin: 0;
 }

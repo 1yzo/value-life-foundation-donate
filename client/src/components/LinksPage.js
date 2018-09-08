@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/page.css';
 import '../styles/links.css';
-import Scroll from 'react-scroll';
 
 const LinksPage = (props, ref) => (
     <div className="page" id="temp">

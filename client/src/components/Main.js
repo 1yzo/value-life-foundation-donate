@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/page.css';
 import '../styles/container.css';
 import '../styles/header.css';
-import { Link, Element, Events, animateScroll, scrollSpy, scroller } from 'react-scroll';
+import { Element } from 'react-scroll';
 import WelcomePage from './WelcomePage'
 import ProgramsPage from './ProgramsPage';
 import CurrentProjectsPage from './CurrentProjectsPage';
@@ -10,7 +10,6 @@ import Header from './Header';
 import LinksPage from './LinksPage';
 import DonatePage from './DonatePage';
 import AboutUsPage from './AboutUsPage';
-import QuickDonate from './QuickDonate';
 
 class Main extends React.Component {
     render() {

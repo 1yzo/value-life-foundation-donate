@@ -2,7 +2,6 @@ import React from 'react';
 import '../styles/page.css';
 import '../styles/donate.css';
 import DonateModal from './DonateModal';
-import PaymentCheckout from './PaymentCheckout';
 
 class DonatePage extends React.Component {
     state = {
@@ -40,7 +39,7 @@ class DonatePage extends React.Component {
                     <h1 className="page__content__header">Donation Method</h1>
                     <form className="options-container" onClick={this.handleChooseMethod}>
                         <div className="icon-container" name="online" onClick={this.handleOpenModal}>
-                            <img className="material-icons" name="online" src="/images/credit-card.png" />
+                            <img className="material-icons" name="online" src="/images/credit-card.png" alt="card-icon"/>
                             <label name="online">Pay Online</label>
                         </div>
                         <a
