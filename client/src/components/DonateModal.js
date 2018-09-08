@@ -119,14 +119,7 @@ class DonateModal extends React.Component {
 
                     {this.props.donationMethod === 'phone' && 
                         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                            <div className="mini-container">
-                                <p>From <strong>USA</strong> (Toll Free)</p>
-                                <a href="tel:18774357853">1-877-435-7853</a>
-                            </div>
-                            <div className="mini-container">
-                                <p>From <strong>ELSEWHERE</strong></p>
-                                <a href="tel:+9492417659">(+) 949-241-7659</a>
-                            </div>
+                            <a style={{ color: '#24b24b', fontSize: '2.5rem' }} href="tel:9496643001">(949) 664-3001</a>
                         </div>
                     }
 
