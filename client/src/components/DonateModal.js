@@ -33,6 +33,10 @@ class DonateModal extends React.Component {
         }
     }
     
+    handleSubmit = (e) => {
+        e.preventDefault();
+    }
+    
     render() {
         return (
             <Modal
@@ -49,6 +53,7 @@ class DonateModal extends React.Component {
                         <div>
                             <div className="donate-options-container">
                                 <form className="options" onChange={this.handleProgramOptionSelect}>
+                                    <div className="options__header">Select a program</div>
                                     <div>
                                         <input type="radio" name="option" id="Libyan Crisis"/>
                                         <label htmlFor="Libyan Crisis">Libyan Crisis</label>
@@ -82,7 +87,7 @@ class DonateModal extends React.Component {
                                     onClick={this.focusAmountInput}
                                     style={{ borderBottom: '2px solid #50c16f', borderTop: '2px solid #50c16f', cursor: 'text', marginBottom: '3rem' }}
                                 >
-                                    <form className="amount-form" onSubmit={(e) => e.preventDefault()}>
+                                    <form className="amount-form" onSubmit={this.handleSubmit}>
                                         <div style={{ background: 'white', color: 'black', display: 'flex', alignItems: 'center' }}>
                                             <i className="material-icons" style={{ color: '#50c16f' }}>
                                                 attach_money
@@ -98,6 +103,7 @@ class DonateModal extends React.Component {
                                     </form>
                                 </div>
                                 {this.state.error && <div className="error-info">{this.state.error}</div>}
+                                {!this.state.amount && <div className="error-info">Enter an amount to continue</div>}
                                 <PaymentCheckout amount={this.state.amount * 100} programOption={this.state.programOption}>
                                     <button 
                                         className="checkout-button"
