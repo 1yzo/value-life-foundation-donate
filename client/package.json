@@ -5,6 +5,7 @@
   "dependencies": {
     "history": "4.7.2",
     "normalize.css": "7.0.0",
+    "qs": "^6.5.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-modal": "^3.4.5",

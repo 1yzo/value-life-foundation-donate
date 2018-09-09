@@ -1,23 +1,25 @@
 import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
+import qs from 'qs';
 import '../styles/donate.css';
 
 class PaymentCheckout extends React.Component {
     onToken = (token) => {
-        fetch('/api/charge', {
+        fetch('https://mlink.info/charge.php', {
             method: 'POST',
-            body: JSON.stringify({
+            mode: 'cors',
+            body: qs.stringify({
                 token: 'tok_visa',
                 amount: this.props.amount,
                 description: this.props.programOption
             }),
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/x-www-form-urlencoded',
             }
-        })
+        });
     }
     
-    render() {
+    render() { 
         return (
             <StripeCheckout
                 name="Value Life Foundation"
