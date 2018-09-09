@@ -10,10 +10,6 @@ textarea {
     height: 100%;
 }
 
-.page--fixed {
-    
-}
-
 .page--first {
     height: 79%;
     border-bottom: 5px solid #50c16f;
@@ -61,6 +57,9 @@ p {
 @media (min-width: 745px) {
     .page {
         display: flex;
+    }
+    #about-page {
+        flex-direction: column;
     }
     .page__content {
         padding: 0;

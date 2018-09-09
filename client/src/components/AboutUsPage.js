@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/page.css';
 
 const AboutUsPage = () => (
-    <div className="page">
+    <div className="page" id="about-page">
         <div className="page__content about">
             <div>
                 <h1 className="page__content__header">Our Vision</h1>
@@ -26,6 +26,13 @@ const AboutUsPage = () => (
                     thus facilitating a wider and more versatile network of donors.
                 </p>
             </div>
+        </div>
+        <div className="page__content" style={{ 'paddingTop': '0' }}>
+            <h1 className="page__content__header">Our Values</h1>
+            <p className="about-value">1. Humanity at large was created by God from a male and a female, and was made into nations that they may know and help one another. Humanity also has the same destiny. So we reject the notion of “Clash of Civilizations”.</p>
+            <p className="about-value">2. Values are dictated by God.</p>
+            <p className="about-value">3. Human life has value by creation..</p>
+            <p className="about-value">4. Poverty, disease, illiteracy, and ignorance are sources of human tragedies and can all be eliminated by mutual understanding, cooperation and hard work</p>
         </div>
     </div>
 );
