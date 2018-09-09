@@ -28,7 +28,6 @@ class ProgramsPage extends React.Component {
                         <div className="page__content">
                             <h1 className="page__content__header">Current</h1>
                             <ul>
-                                <li>Libyan relief and humanitarian assistance (LR)</li>
                                 <li>Needy Families (NF)</li><li>Orphan Support (OS)</li>
                                 <li>Zakat and Qurban Management (ZQM)</li>
                             </ul>
@@ -37,7 +36,6 @@ class ProgramsPage extends React.Component {
                             <h1 className="page__content__header">Future</h1>
                             <ul>
                                 <li>Know Government Aid Programs (KGAP)</li>
-                                <li>Help Africans (HA)</li>
                                 <li>Support Needy Students (SNS)</li>
                             </ul>
                         </div>
