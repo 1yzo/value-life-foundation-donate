@@ -9,7 +9,6 @@ import DonatePage from '../DonatePage';
 import Header from '../Header';
 import LinksPage from '../LinksPage';
 import ProgramsPage from '../ProgramsPage';
-import QuickDonate from '../QuickDonate';
 import WelcomePage from '../WelcomePage';
 
 import '../../styles/container.css';
