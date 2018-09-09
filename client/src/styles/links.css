@@ -16,3 +16,12 @@
 .links-holder a:hover {
     transform: scale(1.1);
 }
+
+.links-section--mobile > i {
+    font-size: 4rem;
+    color: #24b24b;
+}
+
+.link--mobile {
+    margin: 1rem;
+}

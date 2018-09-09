@@ -30,6 +30,7 @@ class FloatingMenu extends React.Component {
                 {
                     this.state.shouldExpand &&
                     <div className="links-section--mobile">
+                        <i className="material-icons">keyboard_arrow_down</i>
                         <Link onClick={this.handleExpand} className="link link--mobile" to="about-us-page" spy smooth duration={500} offset={-70}>
                             <h4>ABOUT US</h4>
                         </Link>
