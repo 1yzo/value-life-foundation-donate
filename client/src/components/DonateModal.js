@@ -103,7 +103,7 @@ class DonateModal extends React.Component {
                                     </form>
                                 </div>
                                 {this.state.error && <div className="error-info">{this.state.error}</div>}
-                                {(!this.state.amount || !this.state.programOption) && <div className="error-info">Enter an amount and program to continue</div>}
+                                {!this.state.error && (!this.state.amount || !this.state.programOption) && <div className="error-info">Enter an amount and program to continue</div>}
                                 <PaymentCheckout amount={this.state.amount * 100} programOption={this.state.programOption}>
                                     <button 
                                         className="checkout-button"
