@@ -1,13 +1,23 @@
-import BG0 from './assets/chinh-le-duc-475924-unsplash.jpg'
-import BG1 from './assets/john-moeses-bauan-632107-unsplash.jpg'
-import BG2 from './assets/jonathan-kho-709591-unsplash.jpg'
-import BG3 from './assets/mika-588573-unsplash.jpg'
-import BG4 from './assets/peter-berko-270652-unsplash.jpg'
-import BG5 from './assets/scott-umstattd-89611-unsplash.jpg'
-import BG6 from './assets/yanni-panesa-216327-unsplash.jpg'
-import BG7 from './assets/woman-sitting.jpg'
-import BG8 from './assets/hands.jpg'
-import BG9 from './assets/alley.jpeg'
+import BG0 from './assets/chinh_40_cover.jpg'
+import BG1 from './assets/john_40_cover.jpg'
+import BG2 from './assets/jon_40_cover.jpg'
+import BG3 from './assets/mika_40_cover.jpg'
+import BG4 from './assets/peter_40_cover.jpg'
+import BG5 from './assets/scott_40_cover.jpg'
+import BG6 from './assets/yanni_40_cover.jpg'
+import BG7 from './assets/woman-sitting_20_cover.jpg'
+import BG8 from './assets/hands_40_cover.jpg'
+import BG9 from './assets/alley_40_cover.jpeg'
+
+import BLACK20 from './assets/black20.png'
+import BLACK40 from './assets/black40.png'
+import BLACK60 from './assets/black60.png'
+
+const BLACK = {
+    20: BLACK20,
+    40: BLACK40,
+    60: BLACK60
+}
 
 /**
  * https://stackoverflow.com/a/7765814/1828637
@@ -20,11 +30,11 @@ function getWeek(date) {
 
 /**
  * Will cycle image every X weeks.
- * Where X is the length of *Image.
- * So if topImagePaths.length is 3, then top will cycle every 3 weeks.
- * If botImagePaths.length is 2, then bottom will cycle every 2 weeks.
+ * Where X is the length of *ImagePaths.
+ * Image paths must include final ending of _PERCENT-BLACK_OPACITY_BACKGROUND-SIZE.[png/jpg/etc]
+ * Returns object of CSS background's.
  */
-export function getWeekImagePaths() {
+export function getWeekBackgroundStyles() {
 
     const topImagePaths = [BG9, BG0, BG1, BG2];
     const midImagePaths = [BG8, BG3, BG4];
@@ -32,9 +42,25 @@ export function getWeekImagePaths() {
 
     const curWeek = getWeek(new Date());
 
-    return {
-        topImagePath: topImagePaths[curWeek % topImagePaths.length],
-        midImagePath: midImagePaths[curWeek % midImagePaths.length],
-        botImagePath: botImagePaths[curWeek % botImagePaths.length]
-    }
+    const imagePaths = [
+        topImagePaths[curWeek % topImagePaths.length],
+        midImagePaths[curWeek % midImagePaths.length],
+        botImagePaths[curWeek % botImagePaths.length]
+    ];
+
+    const backgroundStyles = imagePaths.map(imagePath => {
+
+        const backgroundSize = imagePath.match(/.*_(.*?)\./)[1];
+        const blackPercent = imagePath.match(/.*_(\d\d)_.*?\./)[1];
+
+        return {
+            background: `url("${BLACK[blackPercent]}") repeat, url("${imagePath}")`,
+            backgroundSize
+        };
+
+    });
+
+    const [ topBackgroundStyle, midBackgroundStyle, botBackgroundStyle ] = backgroundStyles;
+
+    return { botBackgroundStyle, midBackgroundStyle, topBackgroundStyle };
 }

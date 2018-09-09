@@ -3,9 +3,9 @@ import React from 'react';
 import '../styles/links.css';
 import '../styles/page.css';
 
-const LinksPage = ({ backgroundImagePath }) => (
+const LinksPage = ({ backgroundStyle }) => (
     <div className="page" id="temp">
-        <div className="page__content links" style={{ color: 'white', backgroundImage: `url(${backgroundImagePath})` }}>
+        <div className="page__content links" style={{ color: 'white', ...backgroundStyle }}>
             <h1 className="page__content__header">
                 Fighting poverty is targeted by VLF and
                 accordingly we support poverty studies
