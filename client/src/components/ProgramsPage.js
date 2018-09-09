@@ -2,16 +2,23 @@ import '../styles/page.css';
 import React from 'react';
 import Carousel from './Carousel';
 
-class ProgramsPage extends React.Component {    
+class ProgramsPage extends React.Component {
     render() {
+        const { backgroundImagePath } = this.props;
+
+        const style = {
+            color: 'white',
+            backgroundImage: `url(${backgroundImagePath})`
+        };
+
         return (
             <div className="page">
-                <div className="page__content page__content--centered programs" style={{ color: 'white' }}>
+                <div className="page__content page__content--centered programs" style={style}>
                     <h1 className="page__content__header">Programs</h1>
                     <p>
-                        In Value Life foundation two types of programs are structured and implemented: Human Relief Program 
-                        (HRP) and Social Development Programs (SDP).  The HRPs involve assisting needy victims in hardships 
-                        or tragedies.  Assistance can be in the form of food supplies, medical aid, shelter, and clothing.  
+                        In Value Life foundation two types of programs are structured and implemented: Human Relief Program
+                        (HRP) and Social Development Programs (SDP).  The HRPs involve assisting needy victims in hardships
+                        or tragedies.  Assistance can be in the form of food supplies, medical aid, shelter, and clothing.
                         The SDPs however cover social and  educational services.  VLF specializes in helping children, the
                         elderly, the homeless, and the illiterate.  Programs are carried out through the following projects:
                     </p>
@@ -34,7 +41,7 @@ class ProgramsPage extends React.Component {
                                 <li>Support Needy Students (SNS)</li>
                             </ul>
                         </div>
-                    ]}/>  
+                    ]}/>
                 </div>
             </div>
         );
