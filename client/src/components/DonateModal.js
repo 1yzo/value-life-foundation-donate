@@ -63,7 +63,7 @@ class DonateModal extends React.Component {
                                         <label htmlFor="Needy Families">Needy Families</label>
                                         {   
                                             this.state.programOption === 'Needy Families' &&
-                                            <div className="info">$100 supports 1 family</div>
+                                            <div className="info">$100 supports 1 family for one month</div>
                                         }
                                     </div>
                                     <div>
@@ -75,7 +75,7 @@ class DonateModal extends React.Component {
                                         <label htmlFor="Sponsor an Orphan">Sponsor an Orphan</label>
                                         {
                                             this.state.programOption === 'Sponsor an Orphan' &&
-                                            <div className="info">$35 supports 1 orphan</div>
+                                            <div className="info">$35 supports 1 orphan for one month</div>
                                         }
                                     </div>
                                     <div>
@@ -103,7 +103,7 @@ class DonateModal extends React.Component {
                                     </form>
                                 </div>
                                 {this.state.error && <div className="error-info">{this.state.error}</div>}
-                                {!this.state.amount && <div className="error-info">Enter an amount to continue</div>}
+                                {(!this.state.amount || !this.state.programOption) && <div className="error-info">Enter an amount and program to continue</div>}
                                 <PaymentCheckout amount={this.state.amount * 100} programOption={this.state.programOption}>
                                     <button 
                                         className="checkout-button"
