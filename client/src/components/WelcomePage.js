@@ -1,9 +1,10 @@
 import React from 'react';
+
 import '../styles/page.css';
 import '../styles/backgrounds.css';
 
-const WelcomePage = ({ backgroundImagePath }) => (
-    <div className="page page--first welcome" style={{ backgroundImage: `url(${backgroundImagePath})` }}>
+const WelcomePage = ({ backgroundStyle }) => (
+    <div className="page page--first welcome" style={backgroundStyle}>
         <div style={{ flex: 1 }} />
         <div className="page__content" style={{ color: 'white', marginTop: '3rem' }}>
             <h1 className="page__content__header">Welcome to <br/>  Value Life Foundation</h1>

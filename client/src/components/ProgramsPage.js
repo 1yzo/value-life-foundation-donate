@@ -4,16 +4,16 @@ import Carousel from './Carousel';
 
 class ProgramsPage extends React.Component {
     render() {
-        const { backgroundImagePath } = this.props;
+        const { backgroundStyle } = this.props;
 
         const style = {
             color: 'white',
-            backgroundImage: `url(${backgroundImagePath})`
+            ...backgroundStyle
         };
 
         return (
             <div className="page">
-                <div className="page__content page__content--centered programs" style={style}>
+                <div className="page__content page__content--centered page__content--programs" style={style}>
                     <h1 className="page__content__header">Programs</h1>
                     <p>
                         In Value Life foundation two types of programs are structured and implemented: Human Relief Program
