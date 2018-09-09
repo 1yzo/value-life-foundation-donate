@@ -1,7 +1,7 @@
 import React from 'react';
 import { Element } from 'react-scroll';
 
-import { getWeekImagePaths } from './utils';
+import { getWeekBackgroundStyles } from './utils';
 
 import AboutUsPage from '../AboutUsPage';
 import CurrentProjectsPage from '../CurrentProjectsPage';
@@ -18,24 +18,24 @@ import '../../styles/page.css';
 class Main extends React.Component {
     render() {
 
-        const { topImagePath, midImagePath, botImagePath } = getWeekImagePaths();
+        const { topBackgroundStyle, midBackgroundStyle, botBackgroundStyle } = getWeekBackgroundStyles();
 
         return (
             <div>
                 <Header />
                 <div className="container">
-                    <WelcomePage backgroundImagePath={topImagePath} />
+                    <WelcomePage backgroundStyle={topBackgroundStyle} />
                     <Element name="about-us-page">
                         <AboutUsPage />
                     </Element>
                     <Element name="programs-page">
-                        <ProgramsPage backgroundImagePath={midImagePath} />
+                        <ProgramsPage backgroundStyle={midBackgroundStyle} />
                     </Element>
                     <Element name="current-projects-page">
                         <CurrentProjectsPage />
                     </Element>
                     <Element name="links-page">
-                        <LinksPage backgroundImagePath={botImagePath} />
+                        <LinksPage backgroundStyle={botBackgroundStyle} />
                     </Element>
                     <Element name="donate-page">
                         <DonatePage />
