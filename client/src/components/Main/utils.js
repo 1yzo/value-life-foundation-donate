@@ -5,8 +5,9 @@ import BG3 from './assets/mika-588573-unsplash.jpg'
 import BG4 from './assets/peter-berko-270652-unsplash.jpg'
 import BG5 from './assets/scott-umstattd-89611-unsplash.jpg'
 import BG6 from './assets/yanni-panesa-216327-unsplash.jpg'
-
-console.log('BG0:', BG0);
+import BG7 from './assets/woman-sitting.jpg'
+import BG8 from './assets/hands.jpg'
+import BG9 from './assets/alley.jpeg'
 
 /**
  * https://stackoverflow.com/a/7765814/1828637
@@ -25,9 +26,9 @@ function getWeek(date) {
  */
 export function getWeekImagePaths() {
 
-    const topImagePaths = [BG0, BG1, BG2];
-    const midImagePaths = [BG3, BG4];
-    const botImagePaths = [BG5, BG6];
+    const topImagePaths = [BG9, BG0, BG1, BG2];
+    const midImagePaths = [BG8, BG3, BG4];
+    const botImagePaths = [BG7, BG5, BG6];
 
     const curWeek = getWeek(new Date());
 
