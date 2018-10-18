@@ -24,7 +24,7 @@ class PaymentCheckout extends React.Component {
             <StripeCheckout
                 name="Value Life Foundation"
                 token={this.onToken}
-                stripeKey="pk_test_DPKp8WsiKFfpeqjVoxldGJrF"
+                stripeKey="pk_live_XHPeAddewejETOTOwChcVh9w"
                 amount={this.props.amount}
                 description={this.props.programOption}
             >

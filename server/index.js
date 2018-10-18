@@ -1,4 +1,4 @@
-// run "heroku create <app-name>" from here and not in client
+// This backend is not being used anymore - switched to php backend hosted on mLink
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
