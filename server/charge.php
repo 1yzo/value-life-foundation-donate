@@ -44,7 +44,7 @@
         exit();
     }
 
-    \Stripe\Stripe::setApiKey('sk_test_pKJtliUXZO91jDh4ubIG2KtP');
+    \Stripe\Stripe::setApiKey('sk_live_YGiw458CbYkZypFDcaGObdX2');
 
     $charge = \Stripe\Charge::create([
         'amount' => $amount,
