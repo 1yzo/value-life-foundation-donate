@@ -31,7 +31,7 @@ const AboutUsPage = () => (
             <h1 className="page__content__header">Our Values</h1>
             <p className="about-value"><span className="about-value__index">1.</span> Humanity at large was created by God from a male and a female, and was made into nations that they may know and help one another. Humanity also has the same destiny. So we reject the notion of “Clash of Civilizations”.</p>
             <p className="about-value"><span className="about-value__index">2.</span> Values are dictated by God.</p>
-            <p className="about-value"><span className="about-value__index">3.</span> Human life has value by creation..</p>
+            <p className="about-value"><span className="about-value__index">3.</span> Human life has value by creation.</p>
             <p className="about-value"><span className="about-value__index">4.</span> Poverty, disease, illiteracy, and ignorance are sources of human tragedies and can all be eliminated by mutual understanding, cooperation and hard work</p>
             <p className="about-value"><span className="about-value__index">5.</span> We are in the service of people.</p>
             <p className="about-value"><span className="about-value__index">6.</span> Our corporation must constantly reach out to fulfill its tasks. This done by seeking engagement with broader societies.</p>
