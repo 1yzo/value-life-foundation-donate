@@ -57,7 +57,7 @@ class DonatePage extends React.Component {
                         </div>
                         <div className="icon-container" name="phone" onClick={this.handleOpenModal}>
                             <i className="material-icons" name="phone">phone</i>
-                            <label name="phone">Call Us</label>
+                            <label name="phone">Contact Us</label>
                         </div>
                     </form>
                 </div>

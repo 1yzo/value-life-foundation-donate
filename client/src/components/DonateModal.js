@@ -125,7 +125,8 @@ class DonateModal extends React.Component {
 
                     {this.props.donationMethod === 'phone' && 
                         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                            <a style={{ color: '#24b24b', fontSize: '2.5rem' }} href="tel:9496643001">(949) 664-3001</a>
+                            <a style={{ color: '#24b24b', fontSize: '2.5rem', marginBottom: '30px' }} href="tel:9496643001">(949) 664-3001</a>
+                            <a style={{ color: '#24b24b', fontSize: '2.5rem' }} href="mailto:info@valuelife.org">info@valuelife.org</a>
                         </div>
                     }
 
