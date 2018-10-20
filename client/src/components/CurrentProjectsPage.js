@@ -20,13 +20,6 @@ const CurrentProjectsPage = () => {
                         This project is structured to help qualified families in need.  To qualify for 
                         VLF help, feel free to contact us.
                     </p>
-                </div>,
-                <div className="page__content">
-                    <h1 className="page__content__header">Zakat and Qurban Management</h1>
-                    <p>
-                        This project takes care of collection and distributaries of Zakat (Alms) as well as the 
-                        Qurban (Feast sacrifice). ZQM is designed for the Muslim community donors.  
-                    </p>
                 </div>
             ]}/>
         </div>

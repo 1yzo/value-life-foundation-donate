@@ -28,8 +28,8 @@ class ProgramsPage extends React.Component {
                         <div className="page__content">
                             <h1 className="page__content__header">Current</h1>
                             <ul>
-                                <li>Needy Families (NF)</li><li>Orphan Support (OS)</li>
-                                <li>Zakat and Qurban Management (ZQM)</li>
+                                <li>Needy Families (NF)</li>
+                                <li>Orphan Support (OS)</li>
                             </ul>
                         </div>,
                         <div className="page__content">
