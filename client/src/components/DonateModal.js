@@ -32,11 +32,11 @@ class DonateModal extends React.Component {
             this.setState(() => ({ amount }));
         }
     }
-    
+
     handleSubmit = (e) => {
         e.preventDefault();
     }
-    
+
     render() {
         return (
             <Modal
@@ -55,20 +55,12 @@ class DonateModal extends React.Component {
                                 <form className="options" onChange={this.handleProgramOptionSelect}>
                                     <div className="options__header">Select a program</div>
                                     <div>
-                                        <input type="radio" name="option" id="Libyan Crisis"/>
-                                        <label htmlFor="Libyan Crisis">Libyan Crisis</label>
-                                    </div>
-                                    <div>
                                         <input type="radio" name="option" id="Needy Families"/>
                                         <label htmlFor="Needy Families">Needy Families</label>
-                                        {   
+                                        {
                                             this.state.programOption === 'Needy Families' &&
                                             <div className="info">$100 supports 1 family for one month</div>
                                         }
-                                    </div>
-                                    <div>
-                                        <input type="radio" name="option" id="Charity"/>
-                                        <label htmlFor="Charity">Charity (Zakat Al Mal)</label>
                                     </div>
                                     <div>
                                         <input type="radio" name="option" id="Sponsor an Orphan"/>
@@ -80,10 +72,10 @@ class DonateModal extends React.Component {
                                     </div>
                                     <div>
                                         <input type="radio" name="option" id="General Donation"/>
-                                        <label htmlFor="General Donation">General Donation (Sadaqah)</label>
+                                        <label htmlFor="General Donation">General Donation</label>
                                     </div>
                                 </form>
-                                <div 
+                                <div
                                     onClick={this.focusAmountInput}
                                     style={{ borderBottom: '2px solid #50c16f', borderTop: '2px solid #50c16f', cursor: 'text', marginBottom: '3rem' }}
                                 >
@@ -105,12 +97,12 @@ class DonateModal extends React.Component {
                                 {this.state.error && <div className="error-info">{this.state.error}</div>}
                                 {!this.state.error && (!this.state.amount || !this.state.programOption) && <div className="error-info">Enter an amount and program to continue</div>}
                                 <PaymentCheckout amount={this.state.amount * 100} programOption={this.state.programOption}>
-                                    <button 
+                                    <button
                                         className="checkout-button"
-                                        disabled={!this.state.amount || !!this.state.error || !this.state.programOption} 
+                                        disabled={!this.state.amount || !!this.state.error || !this.state.programOption}
                                         onClick={() => {
                                             this.props.handleCloseModal();
-                                            this.setState(() => ({ 
+                                            this.setState(() => ({
                                                 programOption: '',
                                                 amount: ''
                                             }));
@@ -123,7 +115,7 @@ class DonateModal extends React.Component {
                         </div>
                     }
 
-                    {this.props.donationMethod === 'phone' && 
+                    {this.props.donationMethod === 'phone' &&
                         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                             <a style={{ color: '#24b24b', fontSize: '2.5rem', marginBottom: '30px' }} href="tel:9496643001">(949) 664-3001</a>
                             <a style={{ color: '#24b24b', fontSize: '2.5rem' }} href="mailto:info@valuelife.org">info@valuelife.org</a>
