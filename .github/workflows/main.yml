@@ -4,13 +4,20 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
-
-    - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BASE_BRANCH: master # The branch the action should deploy from.
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: client # The folder the action should deploy.
+      -
+        name: Checkout
+        uses: actions/checkout@v1
+      -
+        name: Build
+        run: |
+          cd client
+          npm run build
+      -
+        name: Deploy
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v1
+        with:
+          target_branch: gh-pages
+          build_dir: client/build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
