@@ -21,7 +21,7 @@
   "scripts": {
     "doit": "gh-pages --help",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -u Noitidart <noitidart@gmail.com>",
+    "deploy": "gh-pages -d build  -u \"Noitidart <noitidart@gmail.com>\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
