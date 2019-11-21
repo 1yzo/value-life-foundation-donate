@@ -19,8 +19,9 @@
     "redux-thunk": "2.2.0"
   },
   "scripts": {
+    "doit": "gh-pages --help",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build -u \"Noitidart <noitidart@gmail.com>\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
