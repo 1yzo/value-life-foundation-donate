@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "history": "4.7.2",
     "normalize.css": "7.0.0",
     "qs": "^6.5.2",
@@ -18,6 +19,8 @@
     "redux-thunk": "2.2.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -26,5 +29,6 @@
   "proxy": "http://localhost:3001",
   "devDependencies": {
     "@types/react-scroll": "^1.5.3"
-  }
+  },
+  "homepage": "https://noitidart.github.io/value-life-foundation-donate/"
 }
