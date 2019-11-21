@@ -8,17 +8,10 @@ jobs:
         name: Checkout
         uses: actions/checkout@v1
       -
-        name: Build
+        name: Build and Deploy
         run: |
           cd client
           npm i
-          npm run build
-      -
-        name: Deploy
-        if: success()
-        uses: crazy-max/ghaction-github-pages@v1
-        with:
-          target_branch: gh-pages
-          build_dir: client/build
+          npm run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
