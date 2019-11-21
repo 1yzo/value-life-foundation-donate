@@ -11,6 +11,7 @@ jobs:
         name: Build
         run: |
           cd client
+          npm i
           npm run build
       -
         name: Deploy
