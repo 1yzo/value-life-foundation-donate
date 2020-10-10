@@ -56,8 +56,7 @@ class DonatePage extends React.Component {
                     <h1 className="page__content__header">Donate Now</h1>
                     <iframe
                         id="donations-frame"
-                        // src="https://themasjidapp.net/masjids/vlf/donations?stylesheetPath=https://noitidart.github.io/value-life-foundation-donate/static/css/donations.css"
-                        src="https://themasjidapp.net/masjids/vlf/donations?stylesheetPath=http://localhost:3000/donations.css"
+                        src="https://themasjidapp.net/masjids/vlf/donations?stylesheetPath=https://noitidart.github.io/value-life-foundation-donate/donations.css"
                         style={{ width: '100%'}}
                         frameborder="0"
                     />
