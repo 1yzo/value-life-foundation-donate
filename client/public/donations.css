@@ -1,3 +1,7 @@
-body {
-  background-color: red;
+.btn.btn-primary {
+  background-color: #50c16f;
+}
+
+.btn.btn-primary:hover {
+  background-color: #42a25c;
 }

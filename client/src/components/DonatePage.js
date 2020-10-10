@@ -26,6 +26,21 @@ class DonatePage extends React.Component {
         this.setState(() => ({ donationMethod: undefined, showModal: false}));
     }
 
+    componentDidMount() {
+        window.addEventListener('message', (e) => {
+            if (e.data && e.data.type === 'contentHeight') {
+                var targetFrame = {
+                    // prayers: prayersFrame,
+                    donations: document.getElementById('donations-frame'),
+                    // events: eventsFrame,
+                }[e.data.page];
+                if (targetFrame) {
+                    targetFrame.style.height = e.data.height + 'px';
+                }
+            }
+        });
+    }
+
     render() {
         return (
             <div className="page donate">
@@ -38,12 +53,16 @@ class DonatePage extends React.Component {
                         alignItems: 'center'
                     }}
                 >
-                    <h1 className="page__content__header">Donation Method</h1>
+                    <h1 className="page__content__header">Donate Now</h1>
+                    <iframe
+                        id="donations-frame"
+                        // src="https://themasjidapp.net/masjids/vlf/donations?stylesheetPath=https://noitidart.github.io/value-life-foundation-donate/static/css/donations.css"
+                        src="https://themasjidapp.net/masjids/vlf/donations?stylesheetPath=http://localhost:3000/donations.css"
+                        style={{ width: '100%'}}
+                        frameborder="0"
+                    />
+                    <h1 className="page__content__subheader">Other Donation Methods</h1>
                     <form className="options-container" onClick={this.handleChooseMethod}>
-                        <div className="icon-container" name="online" onClick={this.handleOpenModal}>
-                            <img className="material-icons" name="online" src={CreditCardPng} alt="card-icon"/>
-                            <label name="online">Pay Online</label>
-                        </div>
                         <a
                             className="icon-container"
                             name="mail"

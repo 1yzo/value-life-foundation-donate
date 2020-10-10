@@ -30,6 +30,11 @@ textarea {
     font-size: 4.5rem;
 }
 
+.page__content__subheader {
+    line-height: 30px;
+    font-size: 2.7rem;
+}
+
 p {
     line-height: 35px;
     font-size: 2rem;
@@ -90,6 +95,9 @@ p {
     }
     .page__content__header {
         font-size: 3.5rem;
+    }
+    .page__content__subheader {
+        font-size: 2.1rem;
     }
     .projects {
         min-height: 485px;

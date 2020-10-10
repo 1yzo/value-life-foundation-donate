@@ -25,6 +25,9 @@ class Main extends React.Component {
                 <Header />
                 <div className="container">
                     <WelcomePage backgroundStyle={topBackgroundStyle} />
+                    <Element name="donate-page">
+                        <DonatePage />
+                    </Element>
                     <Element name="about-us-page">
                         <AboutUsPage />
                     </Element>
@@ -37,9 +40,6 @@ class Main extends React.Component {
                     <Element name="links-page">
                         <LinksPage backgroundStyle={botBackgroundStyle} />
                     </Element>
-                    <Element name="donate-page">
-                        <DonatePage />
-                    </Element>
                 </div>
             </div>
         );
@@ -48,4 +48,3 @@ class Main extends React.Component {
 }
 
 export default Main;
-
