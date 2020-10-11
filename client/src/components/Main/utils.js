@@ -8,6 +8,7 @@ import BG6 from './assets/yanni_40_cover.jpg'
 import BG7 from './assets/woman-sitting_20_cover.jpg'
 import BG8 from './assets/hands_40_cover.jpg'
 import BG9 from './assets/alley_40_cover.jpeg'
+import BG10 from './assets/beggar_40_cover.jpg'
 
 import BLACK20 from './assets/black20.png'
 import BLACK40 from './assets/black40.png'
@@ -36,7 +37,7 @@ function getWeek(date) {
  */
 export function getWeekBackgroundStyles() {
 
-    const topImagePaths = [BG9, BG0, BG1, BG2];
+    const topImagePaths = [BG10];
     const midImagePaths = [BG8, BG3, BG4];
     const botImagePaths = [BG7, BG5, BG6];
 
