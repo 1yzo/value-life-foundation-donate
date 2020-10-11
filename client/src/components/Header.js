@@ -25,7 +25,6 @@ class Header extends React.Component {
             <div>
                 <div className="header">
                     <div className="placeholder"/>
-                    <h1 className="header-link" onClick={this.scrollToTop}>VLF</h1>
                     <div className="links-section">
                         <Link className="link desktop-only" activeClass="link--active" to="about-us-page" spy smooth duration={500} offset={-70}>
                             <h4>ABOUT US</h4>
