@@ -60,28 +60,7 @@ class DonatePage extends React.Component {
                         style={{ width: '100%'}}
                         frameborder="0"
                     />
-                    <h1 className="page__content__subheader">Other Donation Methods</h1>
-                    <form className="options-container" onClick={this.handleChooseMethod}>
-                        <a
-                            className="icon-container"
-                            name="mail"
-                            href="http://www.valuelife.org/donatebymail.htm"
-                            target="_blank" rel="noopener noreferrer"
-                        >
-                            <i className="material-icons" name="mail">mail</i>
-                            <label name="mail">Mail</label>
-                        </a>
-                        <div className="icon-container" name="wireTransfer" onClick={this.handleOpenModal}>
-                            <i className="material-icons" name="wireTransfer">account_balance</i>
-                            <label name="wireTransfer">Wire Transfer</label>
-                        </div>
-                        <div className="icon-container" name="phone" onClick={this.handleOpenModal}>
-                            <i className="material-icons" name="phone">phone</i>
-                            <label name="phone">Contact Us</label>
-                        </div>
-                    </form>
                 </div>
-                <DonateModal showModal={this.state.showModal} handleCloseModal={this.handleCloseModal} donationMethod={this.state.donationMethod}/>
             </div>
         );
     }
