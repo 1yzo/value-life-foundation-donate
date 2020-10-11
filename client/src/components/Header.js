@@ -39,6 +39,9 @@ class Header extends React.Component {
                         <Link className="link desktop-only" activeClass="link--active" to="links-page" spy smooth duration={500} offset={-70}>
                             <h4>LINKS</h4>
                         </Link>
+                        <Link className="link desktop-only" activeClass="link--active" to="contact-us-page" spy smooth duration={500} offset={-70}>
+                            <h4>CONTACT</h4>
+                        </Link>
                         <Link onClick={this.handleDonateClick} className="link"  style={{ paddingRight: 0} } to="donate-page" spy smooth duration={500} offset={-70}>
                             <h4 className="link--donate">DONATE</h4>
                         </Link>

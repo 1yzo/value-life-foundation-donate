@@ -4,6 +4,7 @@ import { Element } from 'react-scroll';
 import { getWeekBackgroundStyles } from './utils';
 
 import AboutUsPage from '../AboutUsPage';
+import ContactUsPage from '../ContactUsPage';
 import CurrentProjectsPage from '../CurrentProjectsPage';
 import DonatePage from '../DonatePage';
 import Header from '../Header';
@@ -39,6 +40,9 @@ class Main extends React.Component {
                     </Element>
                     <Element name="donate-page">
                         <DonatePage />
+                    </Element>
+                    <Element name="contact-us-page">
+                        <ContactUsPage />
                     </Element>
                 </div>
             </div>

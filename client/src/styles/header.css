@@ -34,6 +34,8 @@
     padding: 0 4.5rem;
     color: #24b24b;
     text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
     display: flex;
     height: 6.5rem;
     align-items: center;
