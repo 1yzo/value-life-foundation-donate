@@ -1,9 +1,6 @@
 import React from 'react';
 import '../styles/page.css';
 import '../styles/donate.css';
-import DonateModal from './DonateModal';
-
-import CreditCardPng from './credit-card.png';
 
 class DonatePage extends React.Component {
     state = {
@@ -55,6 +52,7 @@ class DonatePage extends React.Component {
                 >
                     <h1 className="page__content__header">Donate Now</h1>
                     <iframe
+                        title="Donate Now"
                         id="donations-frame"
                         src="https://themasjidapp.net/masjids/vlf/donations?stylesheetPath=https://noitidart.github.io/value-life-foundation-donate/donations.css"
                         style={{ width: '100%'}}
